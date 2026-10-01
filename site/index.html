@@ -77,6 +77,25 @@
   <div class="card"><table id="t-prov"></table></div>
   <p class="nota">Ordena por cualquier columna haciendo clic en la cabecera. «En trámite por 1.000 hab.» es un dato derivado: asuntos pendientes entre la población; el CGPJ publica los asuntos, la población es del INE.</p>
 
+  <h2>Quién sostiene todo esto: el personal de la justicia</h2>
+  <div class="aviso warn">
+    <strong>Plazas, efectivos y sustitutos no son lo mismo y aquí no se suman.</strong> Una «plaza constituida» es un puesto creado por real decreto; un «juez en activo» es quien lo ocupa ese año; y hay refuerzos y sustituciones que no son plaza. Mezclarlos daría un número falso. Cada cifra va con su definición y su fuente.
+  </div>
+  <div class="kpis" id="kpis-cap"></div>
+  <p class="nota" id="nota-cap"></p>
+
+  <h2>La demanda crece, la plantilla no</h2>
+  <div class="card"><svg id="g-ratio" role="img" aria-label="Asuntos ingresados por juez en activo, por año"></svg></div>
+  <p class="nota" id="nota-ratio"></p>
+
+  <h2>Cómo se compara España con Europa</h2>
+  <div class="card"><svg id="g-cepej" role="img" aria-label="Jueces y personal por 100.000 habitantes, España frente a la mediana de la UE"></svg></div>
+  <p class="nota">Fuente: CEPEJ (Consejo de Europa), edición 2024, misma definición para todos los países. Es la única comparación internacional fiable: la serie de Eurostat rompe en 2017 por un cambio de criterio en el reporte español y no se usa aquí. <strong>Y ojo, que España también cambia de criterio al reportar al CEPEJ</strong>: en 2024 declara 5.431 jueces profesionales, que son los jueces <em>en activo</em> del CGPJ, pero en 2022 declaró 5.728, que son las <em>plazas constituidas</em>. Por eso aquí se compara un solo año (2024) y no se dibuja una evolución: la tendencia estaría contaminada por el cambio de definición.</p>
+
+  <h2>Las plazas que el CGPJ pide y las que se crean</h2>
+  <div class="card"><svg id="g-plazas" role="img" aria-label="Plazas necesarias frente a plazas creadas por año"></svg></div>
+  <p class="nota" id="nota-plazas"></p>
+
   <h2>Cómo leer esto sin equivocarse</h2>
   <div class="card">
     <p style="margin-top:0"><strong>Congestión alta no significa lentitud.</strong> Significa que hay muchos asuntos vivos por cada uno que se resuelve. Un juzgado puede tener congestión alta y trabajar a buen ritmo si le entra mucho.</p>
@@ -102,7 +121,8 @@ const $ = (s) => document.querySelector(s);
 const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 
 const D = {};
-for (const f of ['nacional_anual', 'nacional_por_orden', 'ccaa', 'provincias'])
+for (const f of ['nacional_anual', 'nacional_por_orden', 'ccaa', 'provincias',
+                 'plantilla_series', 'plantilla_ratios', 'plantilla_cepej', 'plantilla_necesidades'])
   D[f] = await (await fetch(`data/${f}.json`)).json();
 
 const nac = D.nacional_anual.nacional;
@@ -144,6 +164,51 @@ function barras(el, filas, { etiqueta, valor, fmt, alto, resaltar = () => false 
     svgAdd(el, 'rect', { x: m.l, y: yy + 2, width: Math.max(w, 1), height: h - 6, rx: 3, fill: 'var(--bar-hi)', 'fill-opacity': resaltar(f) ? .95 : .5 });
     svgAdd(el, 'text', { x: m.l - 8, y: yy + h / 2 + 4, 'text-anchor': 'end', 'font-size': 12, fill: 'var(--ink)' }, etiqueta(f));
     svgAdd(el, 'text', { x: m.l + w + 6, y: yy + h / 2 + 4, 'font-size': 12, fill: 'var(--ink-2)' }, fmt(valor(f)));
+  });
+}
+
+// Dos barras por categoría (España / mediana UE): comparación directa, misma escala.
+function barrasDobles(el, filas) {
+  const W = 640, m = { t: 34, r: 96, b: 10, l: 168 };
+  const n = filas.length, h = (n * 64 + m.t + m.b - m.t - m.b) / n, max = Math.max(...filas.flatMap((f) => [f[1], f[2]]));
+  const alto = m.t + m.b + n * 64;
+  el.setAttribute('viewBox', `0 0 ${W} ${alto}`); el.innerHTML = '';
+  const ley = (x, c, t) => { svgAdd(el, 'rect', { x, y: 12, width: 16, height: 4, rx: 2, fill: c }); svgAdd(el, 'text', { x: x + 22, y: 19, 'font-size': 12, fill: 'var(--ink-2)' }, t); };
+  ley(m.l, 'var(--bar-hi)', 'España');
+  ley(m.l + 110, 'var(--ink-2)', 'Mediana UE');
+  filas.forEach(([nombre, es, ue], i) => {
+    const yy = m.t + i * 64;
+    svgAdd(el, 'text', { x: m.l - 8, y: yy + 26, 'text-anchor': 'end', 'font-size': 12, fill: 'var(--ink)' }, nombre);
+    [[es, 'var(--bar-hi)', .95], [ue, 'var(--ink-2)', .45]].forEach(([v, c, op], k) => {
+      const w = (W - m.l - m.r) * v / max;
+      svgAdd(el, 'rect', { x: m.l, y: yy + k * 24, width: Math.max(w, 1), height: 18, rx: 3, fill: c, 'fill-opacity': op });
+      svgAdd(el, 'text', { x: m.l + w + 6, y: yy + k * 24 + 14, 'font-size': 12, fill: 'var(--ink-2)' }, N(v, 1));
+    });
+  });
+}
+
+// Barras agrupadas por año con varias series: necesarias vs creadas.
+function barrasAgrupadas(el, categorias, series) {
+  const W = 640, m = { t: 34, r: 20, b: 34, l: 46 };
+  const max = Math.max(...categorias.flatMap((c) => series.map((s) => s.get(c))));
+  const alto = 300, bw = (W - m.l - m.r) / categorias.length, gw = (bw - 14) / series.length;
+  el.setAttribute('viewBox', `0 0 ${W} ${alto}`); el.innerHTML = '';
+  for (let g = 0; g <= 3; g++) {
+    const v = max * g / 3, y = alto - m.b - (alto - m.t - m.b) * v / max;
+    svgAdd(el, 'line', { x1: m.l, x2: W - m.r, y1: y, y2: y, stroke: 'var(--line)' });
+    svgAdd(el, 'text', { x: m.l - 8, y: y + 4, 'text-anchor': 'end', 'font-size': 11, fill: 'var(--ink-2)' }, N(v));
+  }
+  series.forEach((s, k) => {
+    const lx = m.l + k * 190;
+    svgAdd(el, 'rect', { x: lx, y: 12, width: 16, height: 4, rx: 2, fill: s.color });
+    svgAdd(el, 'text', { x: lx + 22, y: 19, 'font-size': 12, fill: 'var(--ink-2)' }, s.nombre);
+  });
+  categorias.forEach((c, i) => {
+    series.forEach((s, k) => {
+      const v = s.get(c), h = (alto - m.t - m.b) * v / max;
+      svgAdd(el, 'rect', { x: m.l + i * bw + 7 + k * gw, y: alto - m.b - h, width: gw - 4, height: h, rx: 3, fill: s.color, 'fill-opacity': .88 });
+    });
+    svgAdd(el, 'text', { x: m.l + i * bw + bw / 2, y: alto - m.b + 18, 'text-anchor': 'middle', 'font-size': 11, fill: 'var(--ink-2)' }, c);
   });
 }
 
@@ -255,6 +320,49 @@ tabla($('#t-prov'), [
   n, i: d[yProv].ingresados, t: d[yProv].en_tramite_final, c: d[yProv].tasa_congestion,
   h: d[yProv].en_tramite_por_1000_hab_derivada ?? 0,
 })), { key: 'c', dir: -1 });
+
+// --- capacidad: personal, carga por juez, Europa y plazas --------------------------------
+{
+  const S = D.plantilla_series.por_anio['2025'];
+  const lajVac = 100 * (1 - S.cuerpo_secretarial_efectivos / S.cuerpo_secretarial_plantilla);
+  $('#kpis-cap').innerHTML = [
+    [N(S.plazas_jueces_constituidas), 'plazas de juez y magistrado constituidas'],
+    [N(S.jueces_en_activo), 'jueces y magistrados en activo'],
+    [N(S.cuerpo_secretarial_efectivos), `letrados de la Administración de Justicia, de ${N(S.cuerpo_secretarial_plantilla)} plazas: ${N(lajVac, 1)} % sin cubrir`],
+    [N(S.funcionarios_judiciales), 'funcionarios de los cuerpos generales'],
+    [N(S.fiscales_plantilla_organica), 'fiscales en plantilla orgánica'],
+  ].map(([b, t]) => `<div class="kpi"><b>${b}</b><span>${t}</span></div>`).join('');
+  $('#nota-cap').textContent = `CGPJ, «La Justicia dato a dato», año 2025. Los cuerpos generales incluyen al personal de las comunidades con competencias transferidas. Del Ministerio de Justicia solo consta el personal del territorio no transferido; el total de personas de los cuerpos generales y de la Fiscalía no se publica, así que aquí van las plazas, no los efectivos.`;
+
+  // Asuntos por juez. La serie de asuntos cambia de criterio en 2016: se pinta el tramo
+  // homogéneo y se dice, porque mezclarlo antes daría una caída que no es real.
+  const R = D.plantilla_ratios.por_anio;
+  const tramo = Object.keys(R).filter((a) => R[a].jueces_en_activo != null && a >= '2016').sort();
+  area($('#g-ratio'), tramo.map((a) => [a, R[a].ingresados_por_juez_activo]), { fmt: (v) => N(v) });
+  const j0 = R[tramo[0]], j1 = R[tramo.at(-1)];
+  $('#nota-ratio').textContent = `Asuntos ingresados por juez en activo. En ${tramo[0]} eran ${N(j0.ingresados_por_juez_activo)} y en ${tramo.at(-1)} son ${N(j1.ingresados_por_juez_activo)}: un ${N(100 * (j1.ingresados_por_juez_activo / j0.ingresados_por_juez_activo - 1), 0)} % más de carga. Los jueces en activo apenas se mueven en el mismo periodo: de ${N(j0.jueces_en_activo)} a ${N(j1.jueces_en_activo)}.`;
+
+  // España frente a la mediana UE con la definición del CEPEJ, que es la única comparable.
+  const C = D.plantilla_cepej.snapshot_2024;
+  barrasDobles($('#g-cepej'), [
+    ['Jueces profesionales', C['Professional judges'].por_100k_espana, C['Professional judges'].por_100k_mediana_ue],
+    ['Personal no juez', C['Non-judge staff'].por_100k_espana, C['Non-judge staff'].por_100k_mediana_ue],
+    ['Fiscales', C['Prosecutors'].por_100k_espana, C['Prosecutors'].por_100k_mediana_ue],
+    ['Personal de fiscalía', C['Non-prosecutor staff'].por_100k_espana, C['Non-prosecutor staff'].por_100k_mediana_ue],
+  ]);
+
+  // Plazas que el CGPJ pide crear frente a las que se crean por real decreto.
+  const P = D.plantilla_necesidades.cgpj_plan_estrategico_2024_2033;
+  const pv = P.plazas_necesarias_vs_creadas;
+  const aniosP = Object.keys(pv).filter((a) => pv[a].necesarias != null && pv[a].creadas != null).sort();
+  barrasAgrupadas($('#g-plazas'), aniosP, [
+    { nombre: 'Necesarias según el CGPJ', color: 'var(--warn)', get: (a) => pv[a].necesarias },
+    { nombre: 'Creadas por real decreto', color: 'var(--bar-hi)', get: (a) => pv[a].creadas },
+  ]);
+  const totN = aniosP.reduce((s, a) => s + pv[a].necesarias, 0);
+  const totC = aniosP.reduce((s, a) => s + pv[a].creadas, 0);
+  $('#nota-plazas').textContent = `Entre ${aniosP[0]} y ${aniosP.at(-1)} el CGPJ pidió crear ${N(totN)} unidades judiciales y se crearon ${N(totC)}: ${N(totN - totC)} de diferencia. El propio CGPJ cifra el déficit estructural en ${N(P.deficit_estructural_unidades_2024)} unidades, contaba ${N(P.vacantes_03_06_2024)} vacantes de juez en junio de 2024 y considera necesario que entren ${N(P.plazas_juez_a_convocar_por_anio_2024_2033)} jueces al año hasta 2033. Todo son cifras del CGPJ, no una estimación propia: no existen módulos de carga oficiales con los que calcular cuántos hacen falta. Falta el año 2024 porque el CGPJ no publicó esa edición.`;
+}
 
 pintaAnio(anioSel[0]);
 </script>

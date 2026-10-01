@@ -1,0 +1,161 @@
+{
+ "meta": {
+  "source": "CEPEJ (Consejo de Europa), «Study on the judicial systems in the EU Member States – Country fiche Spain (2024 data)», publicado para el EU Justice Scoreboard 2026",
+  "url": "https://rm.coe.int/spain-country-fiche/48802c1531",
+  "period": "2014-2024 (datos a 31 de diciembre de cada año)",
+  "unit": "personas y personas por 100.000 habitantes; 'mediana UE' = mediana de los Estados miembros con dato",
+  "acceso": "rm.coe.int devuelve HTTP 403 a curl (Cloudflare); el PDF se descargó con un navegador headless y se extrajo con pdftotext -layout",
+  "definiciones": {
+   "Professional judges": "jueces profesionales a tiempo completo que ejercen en tribunales (metodología CEPEJ, Q46); España reporta 5.431 en 2024 = jueces en activo a 1/1/2025 del CGPJ, pero 5.728 en 2022 = plazas constituidas del CGPJ: el dato español cambia de criterio entre años.",
+   "Non-judge staff": "todo el personal no juez: en España 4.568 Rechtspfleger (= LAJ) + 46.060 'otros' (Gestión, Tramitación, Auxilio) + 1.164 médicos forenses fuera de la cifra.",
+   "Prosecutors": "fiscales (2.812 en 2024)."
+  },
+  "caveat": "Es la ÚNICA fuente armonizada entre países con la misma definición de 'juez'. La serie Eurostat crim_just_job para España (6,2 en 2024) NO es comparable: Eurostat recoge en su cuestionario penal solo una parte de la carrera y la serie española rompe en 2017 (11,56 -> 6,38)."
+ },
+ "judges_evolution": {
+  "2014": {
+   "jueces_profesionales": 5353.0,
+   "por_100k_espana": 11.5,
+   "por_100k_mediana_ue": 19.2
+  },
+  "2015": {
+   "jueces_profesionales": 5367.0,
+   "por_100k_espana": 11.6,
+   "por_100k_mediana_ue": 18.9
+  },
+  "2016": {
+   "jueces_profesionales": 5367.0,
+   "por_100k_espana": 11.5,
+   "por_100k_mediana_ue": 23.6
+  },
+  "2017": {
+   "jueces_profesionales": 5377.0,
+   "por_100k_espana": 11.5,
+   "por_100k_mediana_ue": 23.9
+  },
+  "2018": {
+   "jueces_profesionales": 5419.0,
+   "por_100k_espana": 11.5,
+   "por_100k_mediana_ue": 21.8
+  },
+  "2019": {
+   "jueces_profesionales": 5341.0,
+   "por_100k_espana": 11.3,
+   "por_100k_mediana_ue": 24.5
+  },
+  "2020": {
+   "jueces_profesionales": 5320.0,
+   "por_100k_espana": 11.2,
+   "por_100k_mediana_ue": 23.9
+  },
+  "2021": {
+   "jueces_profesionales": 5408.0,
+   "por_100k_espana": 11.4,
+   "por_100k_mediana_ue": 24.1
+  },
+  "2022": {
+   "jueces_profesionales": 5728.0,
+   "por_100k_espana": 11.9,
+   "por_100k_mediana_ue": 22.9
+  },
+  "2023": {
+   "jueces_profesionales": 5416.0,
+   "por_100k_espana": 11.1,
+   "por_100k_mediana_ue": 21.5
+  },
+  "2024": {
+   "jueces_profesionales": 5431.0,
+   "por_100k_espana": 11.1,
+   "por_100k_mediana_ue": 23.4
+  }
+ },
+ "non_judge_staff_evolution": {
+  "2014": {
+   "personal_no_juez": 48563.0,
+   "por_100k_espana": 104.6,
+   "por_100k_mediana_ue": 54.9
+  },
+  "2015": {
+   "personal_no_juez": 49746.0,
+   "por_100k_espana": 107.1,
+   "por_100k_mediana_ue": 55.2
+  },
+  "2016": {
+   "personal_no_juez": 49186.0,
+   "por_100k_espana": 105.7,
+   "por_100k_mediana_ue": 63.4
+  },
+  "2017": {
+   "personal_no_juez": 46871.0,
+   "por_100k_espana": 100.4,
+   "por_100k_mediana_ue": 63.0
+  },
+  "2018": {
+   "personal_no_juez": 47645.0,
+   "por_100k_espana": 101.4,
+   "por_100k_mediana_ue": 56.5
+  },
+  "2019": {
+   "personal_no_juez": 47816.0,
+   "por_100k_espana": 100.8,
+   "por_100k_mediana_ue": 57.5
+  },
+  "2020": {
+   "personal_no_juez": 48620.0,
+   "por_100k_espana": 102.7,
+   "por_100k_mediana_ue": 59.0
+  },
+  "2021": {
+   "personal_no_juez": 49137.0,
+   "por_100k_espana": 103.6,
+   "por_100k_mediana_ue": 58.5
+  },
+  "2022": {
+   "personal_no_juez": 49802.0,
+   "por_100k_espana": 103.6,
+   "por_100k_mediana_ue": 59.4
+  },
+  "2023": {
+   "personal_no_juez": 50069.0,
+   "por_100k_espana": 103.0,
+   "por_100k_mediana_ue": 60.2
+  },
+  "2024": {
+   "personal_no_juez": 50628.0,
+   "por_100k_espana": 103.2,
+   "por_100k_mediana_ue": 59.4
+  }
+ },
+ "snapshot_2024": {
+  "Professional judges": {
+   "absoluto": 5431.0,
+   "por_100k_espana": 11.1,
+   "por_100k_mediana_ue": 23.4
+  },
+  "Non-judge staff": {
+   "absoluto": 50628.0,
+   "por_100k_espana": 103.2,
+   "por_100k_mediana_ue": 59.4
+  },
+  "Prosecutors": {
+   "absoluto": 2812.0,
+   "por_100k_espana": 5.7,
+   "por_100k_mediana_ue": 14.5
+  },
+  "Non-prosecutor staff": {
+   "absoluto": 2378.0,
+   "por_100k_espana": 4.8,
+   "por_100k_mediana_ue": 11.4
+  },
+  "Lawyers": {
+   "absoluto": 145013.0,
+   "por_100k_espana": 295.5,
+   "por_100k_mediana_ue": 138.7
+  },
+  "rechtspfleger_LAJ": 4568.0,
+  "no_juez_por_juez": {
+   "espana": 9.3,
+   "mediana_ue": 3.3
+  }
+ }
+}

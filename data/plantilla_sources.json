@@ -1,0 +1,115 @@
+{
+ "meta": {
+  "descripcion": "Catálogo de fuentes consultadas para la capacidad del sistema judicial (plantillas). Cada entrada dice si sirve, para qué, y cómo se comprobó. Fecha de comprobación: 2026-10-01.",
+  "generado_por": "scripts/plantilla_fetch.py (descarga) · scripts/plantilla_build.py (series CGPJ + Eurostat + ratios) · scripts/plantilla_contexto.py (CEPEJ, necesidades, RCP, reparto territorial)"
+ },
+ "fuentes": [
+  {
+   "id": "cgpj_dato_a_dato",
+   "nombre": "CGPJ — «La Justicia dato a dato» (informe anual)",
+   "url": "https://www.poderjudicial.es/cgpj/es/Temas/Estadistica-Judicial/Estadistica-por-temas/Actividad-de-los-organos-judiciales/Juzgados-y-Tribunales/Justicia-Dato-a-Dato",
+   "formato": "PDF (uno por año), extraído con pdftotext -layout",
+   "periodo": "ediciones 2003-2023 y 2025 (no existe 2024)",
+   "sirve": true,
+   "para": "plazas de juez constituidas, jueces en activo, plantilla orgánica de fiscales, secretarios/LAJ (plantilla y efectivos), cuerpos generales (gestión, tramitación, auxilio) — todo por TSJ y total nacional, a 1 de enero",
+   "comprobacion": "23 PDF descargados (HTTP 200); 2024: HTTP 404 en las dos rutas y ausente del listado oficial",
+   "derivados": ["data/plantilla_series.json", "data/plantilla_ratios.json"]
+  },
+  {
+   "id": "cgpj_memoria_2025",
+   "nombre": "CGPJ — Memoria anual 2025 (ejercicio 2024), cap. «Panorámica de la Justicia» y anexo «Relación de necesidades»",
+   "url": "https://www.poderjudicial.es/cgpj/es/Poder-Judicial/Consejo-General-del-Poder-Judicial/Actividad-del-CGPJ/Memorias/Memoria-anual-2025--correspondiente-al-ejercicio-2024-",
+   "formato": "PDF por capítulos",
+   "periodo": "2015-2024 (gráficos de plazas y jueces/100k), 2024 (necesidades)",
+   "sirve": "parcial",
+   "para": "verificación cruzada de la serie de plazas (gráfico 2015-2024) y de jueces por 100.000 hab.; indicadores PCNT/PDSC/IR de cobertura por no titulares y días sin cubrir por tipo de órgano y cuerpo (solo ejercicio 2024, no serie); relación de necesidades de plazas",
+   "comprobacion": "HTTP 200; cifras del gráfico de plazas leídas del texto extraído (ver informe)",
+   "limite": "La tabla de necesidades en órganos unipersonales no se puede leer con fiabilidad (fila de suma vacía, filas que no cuadran)"
+  },
+  {
+   "id": "cgpj_plan_estrategico_2024_2033",
+   "nombre": "CGPJ — nota 11/07/2024 sobre el Plan Estratégico 2024-2033",
+   "url": "https://www.poderjudicial.es/cgpj/es/Poder-Judicial/En-Portada/El-CGPJ-considera-necesario-el-ingreso-de-350-nuevos-jueces-al-ano-hasta-2033-para-cubrir-las-vacantes-por-fallecimiento--jubilacion-y-renuncia-que-se-produzcan",
+   "formato": "HTML",
+   "periodo": "2018-2024",
+   "sirve": true,
+   "para": "plazas necesarias vs creadas por año (2019-2024), vacantes a 3/6/2024 (277), plazas a 24/6/2024 (5.854), ingresos por turno libre 2018-2023, déficit estructural de 421 unidades, 1.112 plazas de justicia interina propuestas 2024/25",
+   "comprobacion": "HTTP 200; la ruta en inglés del buscador redirige a esta",
+   "derivados": ["data/plantilla_necesidades.json"]
+  },
+  {
+   "id": "cgpj_transparencia",
+   "nombre": "CGPJ — Portal de transparencia / nota «Las mujeres suponen el 53,2 % de la Carrera Judicial»",
+   "url": "https://www.poderjudicial.es/cgpj/es/Temas/Transparencia",
+   "sirve": false,
+   "motivo": "La nota de prensa que indexa el buscador devuelve HTTP 404 (comprobado con curl y con Firecrawl). El portal de transparencia no publica una tabla de plantilla distinta de la del «Dato a dato»."
+  },
+  {
+   "id": "ministerio_justicia",
+   "nombre": "Ministerio de la Presidencia, Justicia y Relaciones con las Cortes",
+   "url": "https://www.mjusticia.gob.es/",
+   "sirve": "parcial",
+   "para": "Es la fuente primaria de las plantillas de LAJ y cuerpos generales que el CGPJ reproduce en el «Dato a dato» (pie: «Fuente: Ministerio de Justicia»). Nota 14/12/2022: 2.874 plazas convocadas (OEP 2020-2022 acumuladas).",
+   "motivo": "No se ha localizado en mjusticia.gob.es una serie anual tabulada de plantilla/efectivos ni de plazas convocadas por año; los datos de plantilla llegan vía CGPJ."
+  },
+  {
+   "id": "fiscalia",
+   "nombre": "Fiscalía General del Estado — Memoria anual",
+   "url": "https://www.fiscal.es/memorias",
+   "sirve": "indirecto",
+   "para": "La plantilla orgánica del Ministerio Fiscal por fiscalía la publica el CGPJ en el «Dato a dato» citando a la FGE (datos a 1 de enero). CEPEJ reporta además 2.812 fiscales (2024) y 2.378 personal no fiscal.",
+   "motivo": "No se ha descargado la memoria FGE (PDF de cientos de páginas) porque la cifra ya está en la fuente CGPJ con pie de fuente FGE."
+  },
+  {
+   "id": "cepej_fiche_es",
+   "nombre": "CEPEJ (Consejo de Europa) — Country fiche Spain, 2024 data (estudio para el EU Justice Scoreboard 2026)",
+   "url": "https://rm.coe.int/spain-country-fiche/48802c1531",
+   "formato": "PDF (55 páginas)",
+   "periodo": "2014-2024",
+   "sirve": true,
+   "para": "jueces profesionales y personal no juez por 100.000 hab., España vs mediana UE, serie anual; fiscales; LAJ como Rechtspfleger; ratio personal no juez por juez",
+   "comprobacion": "curl → HTTP 403 (Cloudflare). Descargado con navegador headless (3,26 MB, application/pdf) y extraído con pdftotext. Al estar raw/ fuera del repo, otra persona debe repetir la descarga a mano.",
+   "derivados": ["data/plantilla_cepej.json"]
+  },
+  {
+   "id": "eu_justice_scoreboard_2026",
+   "nombre": "Comisión Europea — EU Justice Scoreboard 2026",
+   "url": "https://commission.europa.eu/document/download/d1367f58-9eed-4ebd-8eb3-68646b7c7ddc_en?filename=2026_eu_justice_scoreboard.PDF",
+   "sirve": "parcial",
+   "para": "Figura 36 «Number of judges 2014, 2022-2024 per 100 000 inhabitants (source: CEPEJ)»: España es el 3.º país con menos jueces por habitante de la UE (solo MT, DK e IE por debajo). El PDF trae el gráfico sin valores numéricos; los valores están en la fiche CEPEJ.",
+   "comprobacion": "HTTP 200"
+  },
+  {
+   "id": "eurostat_crim_just_job",
+   "nombre": "Eurostat — crim_just_job (Personnel in the criminal justice system)",
+   "url": "https://ec.europa.eu/eurostat/databrowser/view/crim_just_job",
+   "api": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/crim_just_job?format=JSON&lang=EN",
+   "periodo": "2008-2024",
+   "sirve": "con reservas",
+   "para": "jueces profesionales por 100.000 hab. por país",
+   "motivo": "La serie española rompe en 2017 (11,56 → 6,38) sin que cambie la plantilla real: cambio de criterio de reporte (cuestionario penal UN-CTS). El 6,2 de 2024 que Eurostat difunde NO es comparable con el 11,1 de CEPEJ ni con el 11,9 del CGPJ. Se guarda en data/plantilla_europa.json con la advertencia; no se usa para comparar.",
+   "comprobacion": "API HTTP 200, JSON-stat 2.0"
+  },
+  {
+   "id": "rcp_epsap",
+   "nombre": "Boletín Estadístico del Personal al Servicio de las AAPP (Registro Central de Personal), enero 2026",
+   "url": "https://digital.gob.es/content/dam/portal-mtdfp/funcion-publica/rcp/boletin/2026_01/revision-agosto-2026/EPSAP_Enero_2026%20.pdf",
+   "sirve": "parcial",
+   "para": "efectivos reales (no plazas) de la Administración de Justicia del territorio Ministerio: 14.381 a 1/1/2026 (10.044 funcionarios de carrera, 467 laborales, 3.870 interinos/otros)",
+   "motivo": "Solo cubre el territorio no transferido (5 CCAA + Ceuta y Melilla, 17,7 % de la población). El personal de justicia de las 12 CCAA transferidas está agregado en 'Administración General de las CCAA' sin desglose. La página 'Evolución de efectivos de las CCAA por área de actividad' devuelve HTTP 500 (2026-10-01).",
+   "comprobacion": "HTTP 200"
+  },
+  {
+   "id": "ine_epa",
+   "nombre": "INE — EPA / Contabilidad Nacional (rama de actividad Justicia)",
+   "sirve": false,
+   "motivo": "La EPA publica ocupados por rama CNAE a 2 dígitos: la 84 («Administración Pública y defensa; Seguridad Social obligatoria») no separa la justicia (84.23). No existe un dato EPA de empleo en justicia. No se ha descargado nada."
+  },
+  {
+   "id": "datos_gob_ccaa",
+   "nombre": "datos.gob.es y portales de transparencia de las 12 CCAA transferidas",
+   "sirve": "no comprobado uno a uno",
+   "motivo": "Las plantillas de cuerpos generales por CCAA (incluidas las transferidas) ya vienen consolidadas en el «Dato a dato» con pie 'Fuente: Ministerio de Justicia', porque la plantilla orgánica (RPT) de la oficina judicial la fija el Ministerio aunque la gestione la CCAA. Lo que NO está en ninguna fuente estatal es el número de EFECTIVOS reales (plazas cubiertas) de esas 12 CCAA: solo se publica para LAJ. Obtenerlo exige 12 portales distintos y queda fuera de esta pasada."
+  }
+ ]
+}

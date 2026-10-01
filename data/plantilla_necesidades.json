@@ -1,0 +1,168 @@
+{
+ "cgpj_plan_estrategico_2024_2033": {
+  "meta": {
+   "source": "CGPJ, nota de prensa 11/07/2024 «El CGPJ considera necesario el ingreso de 350 nuevos jueces al año hasta 2033…» (Plan Estratégico 2024-2033, Comisión Permanente)",
+   "url": "https://www.poderjudicial.es/cgpj/es/Poder-Judicial/En-Portada/El-CGPJ-considera-necesario-el-ingreso-de-350-nuevos-jueces-al-ano-hasta-2033-para-cubrir-las-vacantes-por-fallecimiento--jubilacion-y-renuncia-que-se-produzcan",
+   "period": "2018-2024 (datos) y 2024-2033 (proyección del CGPJ)",
+   "unit": "plazas / personas",
+   "caveat": "Las 'plazas necesarias' son las que el propio CGPJ pide crear cada año (unidades judiciales); las 'creadas' son las que aprueba el Gobierno por real decreto. La proyección 2033 es una estimación del CGPJ, no un dato."
+  },
+  "plazas_necesarias_vs_creadas": {
+   "2019": {
+    "necesarias": 263,
+    "creadas": 75,
+    "deficit": 188
+   },
+   "2020": {
+    "necesarias": 40,
+    "creadas": 33,
+    "deficit": 7
+   },
+   "2021": {
+    "necesarias": 110,
+    "creadas": 60,
+    "deficit": 50
+   },
+   "2022": {
+    "necesarias": 176,
+    "creadas": 70,
+    "deficit": 106
+   },
+   "2023": {
+    "necesarias": 293,
+    "creadas": 70,
+    "deficit": 223
+   },
+   "2024": {
+    "necesarias": 421,
+    "creadas": null,
+    "deficit": null
+   }
+  },
+  "ingresos_turno_libre": {
+   "2018": 190,
+   "2019": 180,
+   "2020": 168,
+   "2021": 139,
+   "2022": 120,
+   "2023": 120
+  },
+  "ingresos_cuarto_turno": {
+   "2018": 12,
+   "2020": 50,
+   "2023": 85
+  },
+  "plazas_24_06_2024": {
+   "fecha": "24 de junio de 2024",
+   "total": 5854.0,
+   "unipersonales": 3938.0,
+   "colegiados": 1916.0
+  },
+  "vacantes_03_06_2024": 277,
+  "deficit_estructural_unidades_2024": 421,
+  "justicia_interina_plazas_propuestas_2024_2025": 1112.0,
+  "plazas_juez_a_convocar_por_anio_2024_2033": 350,
+  "proyeccion_2033": {
+   "unidades_judiciales": 6554.0,
+   "efectivos": 4458.0,
+   "vacantes": 2096.0
+  }
+ },
+ "cgpj_memoria_2025_anexo_necesidades": {
+  "meta": {
+   "source": "CGPJ, Memoria anual 2025 (ejercicio 2024), anexo «Relación de necesidades» según valoraciones de los TSJ",
+   "url": "https://www.poderjudicial.es/stfls/CGPJ/SECRETARÍA GENERAL/MEMORIA ANUAL/FICHERO/20250905MemoriaCGPJ2025_08AnexoRelacNecesid.pdf",
+   "period": "2024",
+   "unit": "plazas de magistrado / unidades judiciales"
+  },
+  "organos_colegiados_plazas_magistrado_necesarias": {
+   "total_publicado": 109,
+   "columnas": [
+    4,
+    11,
+    12,
+    58,
+    56,
+    7
+   ],
+   "suma_columnas": 148,
+   "nota": "La fila 'Suma de plazas necesarias' publicada no cuadra con la suma de sus propias columnas ni con la suma de los totales por TSJ (123); se da el valor publicado y la discrepancia."
+  },
+  "organos_unipersonales": "Tabla publicada pero la fila de suma viene vacía y los totales por fila no cuadran con sus columnas (ej. Madrid 93 frente a 113 sumando): no se extrae ningún total."
+ },
+ "rcp_boletin_enero_2026": {
+  "meta": {
+   "source": "Ministerio para la Transformación Digital y de la Función Pública, Boletín Estadístico del Personal al Servicio de las AAPP (EPSAP), enero 2026, epígrafe «Administración al servicio de tribunales de instancia»",
+   "url": "https://digital.gob.es/content/dam/portal-mtdfp/funcion-publica/rcp/boletin/2026_01/revision-agosto-2026/EPSAP_Enero_2026%20.pdf",
+   "period": "1 de enero de 2026",
+   "unit": "efectivos (personas, no plazas)",
+   "caveat": "SOLO el personal de la Administración de Justicia dependiente del Ministerio (territorio no transferido). El personal de las 12 CCAA transferidas está dentro de 'Administración General de las CC.AA.' sin desglose por justicia. Desde enero 2023 el boletín excluye jueces y fiscales. La página 'Evolución de los efectivos de las CCAA por área de actividad' devolvía HTTP 500 el 2026-10-01."
+  },
+  "funcionarios_carrera": 10044.0,
+  "laboral": 467.0,
+  "otro_personal_interinos": 3870.0,
+  "total_efectivos": 14381.0
+ },
+ "reparto_territorial": {
+  "meta": {
+   "source": "INE, cifras de población a 1 de enero (raw/ine_poblacion.json) agregadas por provincia; lista de CCAA transferidas según el reparto competencial vigente (Ministerio: Castilla y León, Castilla-La Mancha, Extremadura, Illes Balears, Región de Murcia, Ceuta y Melilla)",
+   "unit": "habitantes y %"
+  },
+  "anio": 2022,
+  "poblacion_total": 47432893.0,
+  "territorio_ministerio": {
+   "ccaa": [
+    "Castilla y León",
+    "Castilla-La Mancha",
+    "Extremadura",
+    "Illes Balears",
+    "Región de Murcia",
+    "Ceuta",
+    "Melilla"
+   ],
+   "poblacion": 8392228.870897,
+   "porcentaje": 17.7,
+   "detalle": {
+    "Castilla y León": 2376687.069543,
+    "Castilla-La Mancha": 2049980.477375,
+    "Extremadura": 1053317.049935,
+    "Illes Balears": 1223979.928078,
+    "Región de Murcia": 1522516.131694,
+    "Ceuta": 82512.526492,
+    "Melilla": 83235.68778
+   }
+  },
+  "ccaa_transferidas": {
+   "ccaa": [
+    "Andalucía",
+    "Aragón",
+    "Asturias",
+    "Canarias",
+    "Cantabria",
+    "Cataluña",
+    "Comunitat Valenciana",
+    "Galicia",
+    "La Rioja",
+    "Madrid",
+    "Navarra",
+    "País Vasco"
+   ],
+   "n": 12,
+   "poblacion": 39040664.129103,
+   "porcentaje": 82.3
+  }
+ },
+ "oposiciones_cuerpos_generales_2022": {
+  "meta": {
+   "source": "Ministerio de Justicia, nota 14/12/2022 «Justicia convoca 2.874 plazas para diferentes cuerpos de la Administración de Justicia»",
+   "url": "https://www.mjusticia.gob.es/es/institucional/gabinete-comunicacion/noticias-ministerio/Justicia-convoca-2874-plazas-para-diferentes-cuerpos-de-la-Administracion-de-Justicia",
+   "period": "OEP 2020+2021+2022 acumuladas, turno libre",
+   "unit": "plazas",
+   "caveat": "Convocatoria conjunta para todo el territorio (Ministerio + CCAA). Solo plazas de reposición. No se ha localizado una serie anual oficial de plazas convocadas en formato tabular."
+  },
+  "total": 2874,
+  "gestion_procesal": 1091,
+  "tramitacion_procesal": 1191,
+  "auxilio_judicial": 592
+ }
+}

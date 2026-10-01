@@ -1,0 +1,1064 @@
+{
+ "meta": {
+  "source": "CGPJ, «La Justicia dato a dato» (ediciones 2003-2023 y 2025)",
+  "url": "https://www.poderjudicial.es/cgpj/es/Temas/Estadistica-Judicial/Estadistica-por-temas/Actividad-de-los-organos-judiciales/Juzgados-y-Tribunales/Justicia-Dato-a-Dato",
+  "period": "datos a 1 de enero de cada año",
+  "unit": "personas o plazas (totales nacionales)",
+  "campos": {
+   "plazas_jueces_constituidas": {
+    "label": "Plazas de juez/magistrado constituidas (plantilla orgánica)",
+    "source": "CGPJ, «La Justicia dato a dato», tabla «Número de jueces y magistrados» (por TSJ, incluye TS y AN)",
+    "unit": "plazas a 1 de enero",
+    "url": "https://www.poderjudicial.es/cgpj/es/Temas/Estadistica-Judicial/Estadistica-por-temas/Actividad-de-los-organos-judiciales/Juzgados-y-Tribunales/Justicia-Dato-a-Dato",
+    "caveat": "Plazas orgánicas, cubiertas o no. Ed. 2015 incluye 395 jueces en expectativa de destino (rompe la serie; la propia fuente lo advierte). Ed. 2003: tabla por tipo de órgano."
+   },
+   "plazas_jueces_tsj_sin_centrales": {
+    "label": "Jueces y magistrados en los TSJ (sin Tribunal Supremo ni Audiencia Nacional)",
+    "source": "CGPJ, «La Justicia dato a dato» 2004, tabla por TSJ sin fila total (suma de la última columna)",
+    "unit": "plazas a 1 de enero",
+    "url": "https://www.poderjudicial.es/cgpj/es/Temas/Estadistica-Judicial/Estadistica-por-temas/Actividad-de-los-organos-judiciales/Juzgados-y-Tribunales/Justicia-Dato-a-Dato",
+    "caveat": "No comparable con plazas_jueces_constituidas: faltan los órganos centrales."
+   },
+   "jueces_en_activo": {
+    "label": "Jueces y magistrados en activo (carrera judicial)",
+    "source": "CGPJ, «La Justicia dato a dato», tabla «Pirámide de edad de los jueces y magistrados en activo» (fila Total)",
+    "unit": "personas a 1 de enero",
+    "url": "https://www.poderjudicial.es/cgpj/es/Temas/Estadistica-Judicial/Estadistica-por-temas/Actividad-de-los-organos-judiciales/Juzgados-y-Tribunales/Justicia-Dato-a-Dato",
+    "caveat": "Miembros de la carrera judicial en activo; no incluye jueces sustitutos ni magistrados suplentes. Las ediciones 2014 y 2015 publican la misma tabla (5.219): hallazgo de la fuente, no del extractor."
+   },
+   "fiscales_plantilla_organica": {
+    "label": "Plantilla orgánica del Ministerio Fiscal",
+    "source": "Fiscalía General del Estado, vía CGPJ «La Justicia dato a dato»",
+    "unit": "plazas a 1 de enero",
+    "url": "https://www.poderjudicial.es/cgpj/es/Temas/Estadistica-Judicial/Estadistica-por-temas/Actividad-de-los-organos-judiciales/Juzgados-y-Tribunales/Justicia-Dato-a-Dato",
+    "caveat": "Plantilla orgánica (plazas), no efectivos. Ed. 2003-2004: suma Fiscal de Sala + Fiscal + Abogado Fiscal."
+   },
+   "cuerpo_secretarial_plantilla": {
+    "label": "Secretarios judiciales (hasta 2015) / Letrados de la Administración de Justicia: plantilla",
+    "source": "Ministerio de Justicia, vía CGPJ «La Justicia dato a dato»",
+    "unit": "plazas a 1 de enero",
+    "url": "https://www.poderjudicial.es/cgpj/es/Temas/Estadistica-Judicial/Estadistica-por-temas/Actividad-de-los-organos-judiciales/Juzgados-y-Tribunales/Justicia-Dato-a-Dato",
+    "caveat": "Mismo cuerpo, renombrado por la LO 7/2015."
+   },
+   "cuerpo_secretarial_efectivos": {
+    "label": "Secretarios judiciales / LAJ: efectivos (plazas cubiertas)",
+    "source": "Ministerio de Justicia, vía CGPJ «La Justicia dato a dato»",
+    "unit": "personas a 1 de enero",
+    "url": "https://www.poderjudicial.es/cgpj/es/Temas/Estadistica-Judicial/Estadistica-por-temas/Actividad-de-los-organos-judiciales/Juzgados-y-Tribunales/Justicia-Dato-a-Dato",
+    "caveat": "Solo publicado desde la edición 2014. Único cuerpo con plantilla y efectivos en la misma tabla."
+   },
+   "funcionarios_judiciales": {
+    "label": "Cuerpos generales (Gestión + Tramitación + Auxilio)",
+    "source": "Ministerio de Justicia (ed. 2005-2007, 2010-2025) / Estadística Judicial CGPJ (ed. 2008-2009), vía «La Justicia dato a dato»",
+    "unit": "plazas a 1 de enero",
+    "url": "https://www.poderjudicial.es/cgpj/es/Temas/Estadistica-Judicial/Estadistica-por-temas/Actividad-de-los-organos-judiciales/Juzgados-y-Tribunales/Justicia-Dato-a-Dato",
+    "caveat": "Plantilla orgánica, no efectivos. Cubre todo el territorio (incluidas CCAA transferidas) porque el Ministerio consolida las plantillas. CAMBIO DE CRITERIO: hasta la ed. 2015 la tabla es única e incluye todas las sedes (órganos judiciales, fiscalías, juzgados de paz, registros civiles, IML, órganos centrales); desde la ed. 2016 esta cifra es SOLO órganos judiciales, decanatos y servicios comunes, y el resto va en tablas aparte (funcionarios_en_fiscalias, funcionarios_en_juzgados_de_paz…). Por eso baja de ~45.000 (2015) a ~39.000 (2016). Ed. 2008-2009 cambia de fuente (CGPJ, solo órganos judiciales): tampoco comparable. Hasta 2015 la tabla trae médicos forenses en una columna aparte que aquí se excluye."
+   },
+   "funcionarios_en_fiscalias": {
+    "label": "Cuerpos generales destinados en fiscalías",
+    "source": "Ministerio de Justicia, vía CGPJ «La Justicia dato a dato» (desde ed. 2016)",
+    "unit": "plazas a 1 de enero",
+    "url": "https://www.poderjudicial.es/cgpj/es/Temas/Estadistica-Judicial/Estadistica-por-temas/Actividad-de-los-organos-judiciales/Juzgados-y-Tribunales/Justicia-Dato-a-Dato",
+    "caveat": "Tabla aparte solo desde 2016."
+   },
+   "funcionarios_en_juzgados_de_paz": {
+    "label": "Cuerpos generales en juzgados y agrupaciones de juzgados de paz",
+    "source": "Ministerio de Justicia, vía CGPJ «La Justicia dato a dato» (desde ed. 2016)",
+    "unit": "plazas a 1 de enero",
+    "url": "https://www.poderjudicial.es/cgpj/es/Temas/Estadistica-Judicial/Estadistica-por-temas/Actividad-de-los-organos-judiciales/Juzgados-y-Tribunales/Justicia-Dato-a-Dato",
+    "caveat": "Tabla aparte solo desde 2016."
+   }
+  },
+  "descartes": {
+   "2024": "No existe edición «Justicia dato a dato» 2024 (HTTP 404 en las dos rutas del portal; la página oficial salta de 2023 a 2025).",
+   "2001-2002": "La serie «Justicia dato a dato» empieza en 2003; no hay denominador de jueces para los asuntos de 2001-2002.",
+   "2004 plazas": "La edición 2004 solo trae la tabla por TSJ (sin TS/AN) y sin fila Total: se guarda en plazas_jueces_tsj_sin_centrales y no se usa en ratios.",
+   "2008-2009 funcionarios": "Cambio de fuente (CGPJ en vez de Ministerio, solo órganos judiciales): se guarda pero se marca como no comparable.",
+   "2015 plazas": "Incluye 395 jueces en expectativa de destino como refuerzo (la fuente lo advierte): no comparable con 2014 ni 2016."
+  },
+  "extraido_con": "scripts/plantilla_fetch.py + pdftotext -layout + scripts/plantilla_build.py"
+ },
+ "por_anio": {
+  "2003": {
+   "plazas_jueces_constituidas": 4109.0,
+   "fiscales_plantilla_organica": 1610.0
+  },
+  "2004": {
+   "plazas_jueces_tsj_sin_centrales": 3997.0,
+   "fiscales_plantilla_organica": 1630.0
+  },
+  "2005": {
+   "plazas_jueces_constituidas": 4413.0,
+   "fiscales_plantilla_organica": 1740.0,
+   "cuerpo_secretarial_tipo": "secretarios",
+   "cuerpo_secretarial_plantilla": 3330.0,
+   "funcionarios_judiciales": 36593.0
+  },
+  "2006": {
+   "plazas_jueces_constituidas": 4576.0,
+   "fiscales_plantilla_organica": 1874.0,
+   "cuerpo_secretarial_tipo": "secretarios",
+   "cuerpo_secretarial_plantilla": 3536.0,
+   "funcionarios_judiciales": 38098.0
+  },
+  "2007": {
+   "plazas_jueces_constituidas": 4543.0,
+   "fiscales_plantilla_organica": 1973.0,
+   "cuerpo_secretarial_tipo": "secretarios",
+   "cuerpo_secretarial_plantilla": 3976.0,
+   "funcionarios_judiciales": 39069.0
+  },
+  "2008": {
+   "plazas_jueces_constituidas": 4674.0,
+   "fiscales_plantilla_organica": 2178.0,
+   "cuerpo_secretarial_tipo": "secretarios",
+   "cuerpo_secretarial_plantilla": 3662.0,
+   "funcionarios_judiciales": 32362.0
+  },
+  "2009": {
+   "plazas_jueces_constituidas": 4836.0,
+   "jueces_en_activo": 4439.0,
+   "fiscales_plantilla_organica": 2189.0,
+   "cuerpo_secretarial_tipo": "secretarios",
+   "cuerpo_secretarial_plantilla": 3778.0,
+   "funcionarios_judiciales": 33429.0
+  },
+  "2010": {
+   "plazas_jueces_constituidas": 4984.0,
+   "jueces_en_activo": 4536.0,
+   "fiscales_plantilla_organica": 2307.0,
+   "cuerpo_secretarial_tipo": "secretarios",
+   "cuerpo_secretarial_plantilla": 4115.0,
+   "funcionarios_judiciales": 43747.0
+  },
+  "2011": {
+   "plazas_jueces_constituidas": 5171.0,
+   "jueces_en_activo": 4689.0,
+   "fiscales_plantilla_organica": 2407.0,
+   "cuerpo_secretarial_tipo": "secretarios",
+   "cuerpo_secretarial_plantilla": 4148.0,
+   "funcionarios_judiciales": 44576.0
+  },
+  "2012": {
+   "plazas_jueces_constituidas": 5171.0,
+   "jueces_en_activo": 4890.0,
+   "fiscales_plantilla_organica": 2407.0,
+   "cuerpo_secretarial_tipo": "secretarios",
+   "cuerpo_secretarial_plantilla": 4180.0,
+   "funcionarios_judiciales": 44748.0
+  },
+  "2013": {
+   "plazas_jueces_constituidas": 5211.0,
+   "jueces_en_activo": 5036.0,
+   "fiscales_plantilla_organica": 2407.0,
+   "cuerpo_secretarial_tipo": "secretarios",
+   "cuerpo_secretarial_plantilla": 4191.0,
+   "funcionarios_judiciales": 44839.0
+  },
+  "2014": {
+   "plazas_jueces_constituidas": 5362.0,
+   "jueces_en_activo": 5219.0,
+   "fiscales_plantilla_organica": 2407.0,
+   "cuerpo_secretarial_tipo": "secretarios",
+   "cuerpo_secretarial_plantilla": 4193.0,
+   "cuerpo_secretarial_efectivos": 3665.0,
+   "funcionarios_judiciales": 44896.0
+  },
+  "2015": {
+   "plazas_jueces_constituidas": 5847.0,
+   "jueces_en_activo": 5219.0,
+   "fiscales_plantilla_organica": 2407.0,
+   "cuerpo_secretarial_tipo": "secretarios",
+   "cuerpo_secretarial_plantilla": 4308.0,
+   "cuerpo_secretarial_efectivos": 3615.0,
+   "funcionarios_judiciales": 44937.0
+  },
+  "2016": {
+   "plazas_jueces_constituidas": 5692.0,
+   "jueces_en_activo": 5366.0,
+   "fiscales_plantilla_organica": 2473.0,
+   "cuerpo_secretarial_tipo": "laj",
+   "cuerpo_secretarial_plantilla": 4185.0,
+   "cuerpo_secretarial_efectivos": 3701.0,
+   "funcionarios_judiciales": 39042.0,
+   "funcionarios_en_fiscalias": 2061.0,
+   "funcionarios_en_juzgados_de_paz": 2688.0
+  },
+  "2017": {
+   "plazas_jueces_constituidas": 5507.0,
+   "jueces_en_activo": 5367.0,
+   "fiscales_plantilla_organica": 2473.0,
+   "cuerpo_secretarial_tipo": "laj",
+   "cuerpo_secretarial_plantilla": 4185.0,
+   "cuerpo_secretarial_efectivos": 3746.0,
+   "funcionarios_judiciales": 39058.0,
+   "funcionarios_en_fiscalias": 2069.0,
+   "funcionarios_en_juzgados_de_paz": 2685.0
+  },
+  "2018": {
+   "plazas_jueces_constituidas": 5552.0,
+   "jueces_en_activo": 5377.0,
+   "fiscales_plantilla_organica": 2473.0,
+   "cuerpo_secretarial_tipo": "laj",
+   "cuerpo_secretarial_plantilla": 4209.0,
+   "cuerpo_secretarial_efectivos": 3802.0,
+   "funcionarios_judiciales": 39058.0,
+   "funcionarios_en_fiscalias": 2091.0,
+   "funcionarios_en_juzgados_de_paz": 2690.0
+  },
+  "2019": {
+   "plazas_jueces_constituidas": 5594.0,
+   "jueces_en_activo": 5419.0,
+   "fiscales_plantilla_organica": 2553.0,
+   "cuerpo_secretarial_tipo": "laj",
+   "cuerpo_secretarial_plantilla": 4280.0,
+   "cuerpo_secretarial_efectivos": 3807.0,
+   "funcionarios_judiciales": 39924.0,
+   "funcionarios_en_fiscalias": 2125.0,
+   "funcionarios_en_juzgados_de_paz": 2700.0
+  },
+  "2020": {
+   "plazas_jueces_constituidas": 5635.0,
+   "jueces_en_activo": 5341.0,
+   "fiscales_plantilla_organica": 2553.0,
+   "cuerpo_secretarial_tipo": "laj",
+   "cuerpo_secretarial_plantilla": 4310.0,
+   "cuerpo_secretarial_efectivos": 3746.0,
+   "funcionarios_judiciales": 40155.0,
+   "funcionarios_en_fiscalias": 2154.0,
+   "funcionarios_en_juzgados_de_paz": 2718.0
+  },
+  "2021": {
+   "plazas_jueces_constituidas": 5668.0,
+   "jueces_en_activo": 5320.0,
+   "fiscales_plantilla_organica": 2553.0,
+   "cuerpo_secretarial_tipo": "laj",
+   "cuerpo_secretarial_plantilla": 4422.0,
+   "cuerpo_secretarial_efectivos": 3563.0,
+   "funcionarios_judiciales": 40829.0,
+   "funcionarios_en_fiscalias": 2288.0,
+   "funcionarios_en_juzgados_de_paz": 2700.0
+  },
+  "2022": {
+   "plazas_jueces_constituidas": 5728.0,
+   "jueces_en_activo": 5408.0,
+   "fiscales_plantilla_organica": 2553.0,
+   "cuerpo_secretarial_tipo": "laj",
+   "cuerpo_secretarial_plantilla": 4389.0,
+   "cuerpo_secretarial_efectivos": 3543.0,
+   "funcionarios_judiciales": 41483.0,
+   "funcionarios_en_fiscalias": 2312.0,
+   "funcionarios_en_juzgados_de_paz": 2481.0
+  },
+  "2023": {
+   "plazas_jueces_constituidas": 5799.0,
+   "jueces_en_activo": 5343.0,
+   "fiscales_plantilla_organica": 2613.0,
+   "cuerpo_secretarial_tipo": "laj",
+   "cuerpo_secretarial_plantilla": 4456.0,
+   "cuerpo_secretarial_efectivos": 3449.0,
+   "funcionarios_judiciales": 42699.0,
+   "funcionarios_en_fiscalias": 2312.0,
+   "funcionarios_en_juzgados_de_paz": 2477.0
+  },
+  "2025": {
+   "plazas_jueces_constituidas": 5846.0,
+   "jueces_en_activo": 5431.0,
+   "fiscales_plantilla_organica": 2762.0,
+   "cuerpo_secretarial_tipo": "laj",
+   "cuerpo_secretarial_plantilla": 4543.0,
+   "cuerpo_secretarial_efectivos": 3512.0,
+   "funcionarios_judiciales": 42528.0,
+   "funcionarios_en_fiscalias": 2401.0,
+   "funcionarios_en_juzgados_de_paz": 2489.0
+  }
+ },
+ "extraccion_contexto": {
+  "2003": {
+   "plazas_jueces_constituidas": {
+    "valor": 4109.0,
+    "linea_pdf": 230,
+    "columna_total": false,
+    "texto": "Total 4.109"
+   },
+   "fiscales_plantilla_organica": {
+    "valor": 1610.0,
+    "linea_pdf": 306,
+    "columna_total": false,
+    "texto": "Total 14 1.027 569"
+   }
+  },
+  "2004": {
+   "plazas_jueces_tsj_sin_centrales": {
+    "valor": 3997.0,
+    "linea_pdf": 227,
+    "texto": "sin fila Total: suma de la última columna de 17 filas"
+   },
+   "fiscales_plantilla_organica": {
+    "valor": 1630.0,
+    "linea_pdf": 359,
+    "columna_total": false,
+    "texto": "Total 14 1.049 567"
+   }
+  },
+  "2005": {
+   "plazas_jueces_constituidas": {
+    "valor": 4413.0,
+    "linea_pdf": 261,
+    "columna_total": true,
+    "texto": "Total 9 3.233 469 482 8 212 4.413"
+   },
+   "fiscales_plantilla_organica": {
+    "valor": 1740.0,
+    "linea_pdf": 373,
+    "columna_total": true,
+    "texto": "Total 17 1156 567 1740"
+   },
+   "cuerpo_secretarial": {
+    "tipo": "secretarios",
+    "linea_pdf": 410,
+    "texto": "Total 3.330",
+    "plantilla": 3330.0,
+    "efectivos": null
+   },
+   "funcionarios_judiciales": {
+    "valor": 36593.0,
+    "linea_pdf": 484,
+    "columna_total": false,
+    "texto": "Total 889 10.929 17.551 8.113",
+    "nota": "suma Gestión+Tramitación+Auxilio; excluye la columna de médicos forenses",
+    "fuente_pdf": ""
+   }
+  },
+  "2006": {
+   "plazas_jueces_constituidas": {
+    "valor": 4576.0,
+    "linea_pdf": 260,
+    "columna_total": true,
+    "texto": "Total 9 3.439 489 506 8 125 4.576"
+   },
+   "fiscales_plantilla_organica": {
+    "valor": 1874.0,
+    "linea_pdf": 412,
+    "columna_total": true,
+    "texto": "Total 20 1.287 567 1.874"
+   },
+   "cuerpo_secretarial": {
+    "tipo": "secretarios",
+    "linea_pdf": 449,
+    "texto": "Total 3.536",
+    "plantilla": 3536.0,
+    "efectivos": null
+   },
+   "funcionarios_judiciales": {
+    "valor": 38098.0,
+    "linea_pdf": 520,
+    "columna_total": false,
+    "texto": "Total 913 11.406 18.294 8.398",
+    "nota": "suma Gestión+Tramitación+Auxilio; excluye la columna de médicos forenses",
+    "fuente_pdf": ""
+   }
+  },
+  "2007": {
+   "plazas_jueces_constituidas": {
+    "valor": 4543.0,
+    "linea_pdf": 260,
+    "columna_total": true,
+    "texto": "Total 9 3522 496 508 8 4.543"
+   },
+   "fiscales_plantilla_organica": {
+    "valor": 1973.0,
+    "linea_pdf": 417,
+    "columna_total": true,
+    "texto": "Total 20 1.386 567 1.973"
+   },
+   "cuerpo_secretarial": {
+    "tipo": "secretarios",
+    "linea_pdf": 454,
+    "texto": "Total 3.976",
+    "plantilla": 3976.0,
+    "efectivos": null
+   },
+   "funcionarios_judiciales": {
+    "valor": 39069.0,
+    "linea_pdf": 525,
+    "columna_total": false,
+    "texto": "Total 943 11.681 18.823 8.565",
+    "nota": "suma Gestión+Tramitación+Auxilio; excluye la columna de médicos forenses",
+    "fuente_pdf": "Fuente: Estadística Judicial CGPJ. 2007"
+   }
+  },
+  "2008": {
+   "plazas_jueces_constituidas": {
+    "valor": 4674.0,
+    "linea_pdf": 312,
+    "columna_total": true,
+    "texto": "Total 9 3.627 518 512 8 4.674"
+   },
+   "fiscales_plantilla_organica": {
+    "valor": 2178.0,
+    "linea_pdf": 451,
+    "columna_total": true,
+    "texto": "Total 23 1.588 567 2.178"
+   },
+   "cuerpo_secretarial": {
+    "tipo": "secretarios",
+    "linea_pdf": 488,
+    "texto": "Total 3.662",
+    "plantilla": 3662.0,
+    "efectivos": null
+   },
+   "funcionarios_judiciales": {
+    "valor": 32362.0,
+    "linea_pdf": 559,
+    "columna_total": false,
+    "texto": "Total 1.090 10.161 15.687 6.514",
+    "nota": "suma Gestión+Tramitación+Auxilio; excluye la columna de médicos forenses",
+    "fuente_pdf": "Fuente: Estadística Judicial CGPJ. 2008 (contabiliza únicamente datos de los órganos judiciales y servicios comunes de notificaciones y embargos)"
+   }
+  },
+  "2009": {
+   "plazas_jueces_constituidas": {
+    "valor": 4836.0,
+    "linea_pdf": 308,
+    "columna_total": true,
+    "texto": "Total 9 3.753 547 519 8 4.836"
+   },
+   "jueces_en_activo": {
+    "valor": 4439.0,
+    "linea_pdf": 386,
+    "texto": "Total 109 1.420 1.740 865 305 4.439 45,7 15,1"
+   },
+   "fiscales_plantilla_organica": {
+    "valor": 2189.0,
+    "linea_pdf": 459,
+    "columna_total": true,
+    "texto": "Total 23 1.599 567 2.189"
+   },
+   "cuerpo_secretarial": {
+    "tipo": "secretarios",
+    "linea_pdf": 496,
+    "texto": "Total 3.778",
+    "plantilla": 3778.0,
+    "efectivos": null
+   },
+   "funcionarios_judiciales": {
+    "valor": 33429.0,
+    "linea_pdf": 565,
+    "columna_total": false,
+    "texto": "Total 1.125 10.493 16.223 6.713",
+    "nota": "suma Gestión+Tramitación+Auxilio; excluye la columna de médicos forenses",
+    "fuente_pdf": "Fuente: Estadística Judicial CGPJ. 2009 (contabiliza únicamente datos de los órganos judiciales y servicios comunes de notificaciones y embargos)"
+   }
+  },
+  "2010": {
+   "plazas_jueces_constituidas": {
+    "valor": 4984.0,
+    "linea_pdf": 313,
+    "columna_total": true,
+    "texto": "Total 9 3.881 561 525 8 4.984"
+   },
+   "jueces_en_activo": {
+    "valor": 4536.0,
+    "linea_pdf": 391,
+    "texto": "Total 97 1.417 1.716 969 337 4.536 46 16"
+   },
+   "fiscales_plantilla_organica": {
+    "valor": 2307.0,
+    "linea_pdf": 464,
+    "columna_total": true,
+    "texto": "Total 23 1.700 584 2.307"
+   },
+   "cuerpo_secretarial": {
+    "tipo": "secretarios",
+    "linea_pdf": 501,
+    "texto": "Total 4.115",
+    "plantilla": 4115.0,
+    "efectivos": null
+   },
+   "funcionarios_judiciales": {
+    "valor": 43747.0,
+    "linea_pdf": 574,
+    "columna_total": false,
+    "texto": "Total 1.035 13.715 20.842 9.190",
+    "nota": "suma Gestión+Tramitación+Auxilio; excluye la columna de médicos forenses",
+    "fuente_pdf": "Fuente: Ministerio de Justicia. 2010"
+   }
+  },
+  "2011": {
+   "plazas_jueces_constituidas": {
+    "valor": 5171.0,
+    "linea_pdf": 308,
+    "columna_total": true,
+    "texto": "TOTAL 9 3.999 569 536 8 50 5.171"
+   },
+   "jueces_en_activo": {
+    "valor": 4689.0,
+    "linea_pdf": 395,
+    "texto": "Total 82 1.418 1.723 1.075 391 4.689 46,7 15,9"
+   },
+   "fiscales_plantilla_organica": {
+    "valor": 2407.0,
+    "linea_pdf": 469,
+    "columna_total": true,
+    "texto": "Total 25 1.778 604 2.407"
+   },
+   "cuerpo_secretarial": {
+    "tipo": "secretarios",
+    "linea_pdf": 503,
+    "texto": "Total 4.148",
+    "plantilla": 4148.0,
+    "efectivos": null
+   },
+   "funcionarios_judiciales": {
+    "valor": 44576.0,
+    "linea_pdf": 570,
+    "columna_total": false,
+    "texto": "Total 1.073 13.979 21.267 9.330",
+    "nota": "suma Gestión+Tramitación+Auxilio; excluye la columna de médicos forenses",
+    "fuente_pdf": "Fuente: Ministerio de Justicia. 2011"
+   }
+  },
+  "2012": {
+   "plazas_jueces_constituidas": {
+    "valor": 5171.0,
+    "linea_pdf": 305,
+    "columna_total": true,
+    "texto": "TOTAL 9 3.999 569 536 8 50 5.171"
+   },
+   "jueces_en_activo": {
+    "valor": 4890.0,
+    "linea_pdf": 393,
+    "texto": "Total 89 1.386 1.767 1.231 417 4.890 47,1 16,0"
+   },
+   "fiscales_plantilla_organica": {
+    "valor": 2407.0,
+    "linea_pdf": 467,
+    "columna_total": true,
+    "texto": "Total 25 1.778 604 2.407"
+   },
+   "cuerpo_secretarial": {
+    "tipo": "secretarios",
+    "linea_pdf": 501,
+    "texto": "Total 4.180",
+    "plantilla": 4180.0,
+    "efectivos": null
+   },
+   "funcionarios_judiciales": {
+    "valor": 44748.0,
+    "linea_pdf": 567,
+    "columna_total": false,
+    "texto": "Total 1.091 13.986 21.382 9.380",
+    "nota": "suma Gestión+Tramitación+Auxilio; excluye la columna de médicos forenses",
+    "fuente_pdf": "Fuente: Ministerio de Justicia. 2012"
+   }
+  },
+  "2013": {
+   "plazas_jueces_constituidas": {
+    "valor": 5211.0,
+    "linea_pdf": 291,
+    "columna_total": true,
+    "texto": "TOTAL 9 3.999 569 536 8 50 40 5.211"
+   },
+   "jueces_en_activo": {
+    "valor": 5036.0,
+    "linea_pdf": 381,
+    "texto": "Total 104 1.368 1.732 1.386 446 5.036 47,4 16,3"
+   },
+   "fiscales_plantilla_organica": {
+    "valor": 2407.0,
+    "linea_pdf": 455,
+    "columna_total": true,
+    "texto": "Total 25 1.778 604 2.407"
+   },
+   "cuerpo_secretarial": {
+    "tipo": "secretarios",
+    "linea_pdf": 489,
+    "texto": "Total 4.191",
+    "plantilla": 4191.0,
+    "efectivos": null
+   },
+   "funcionarios_judiciales": {
+    "valor": 44839.0,
+    "linea_pdf": 558,
+    "columna_total": false,
+    "texto": "Total 1.107 14.013 21.440 9.386",
+    "nota": "suma Gestión+Tramitación+Auxilio; excluye la columna de médicos forenses",
+    "fuente_pdf": "Fuente: Ministerio de Justicia. Datos a 1 de enero de 2013."
+   }
+  },
+  "2014": {
+   "plazas_jueces_constituidas": {
+    "valor": 5362.0,
+    "linea_pdf": 298,
+    "columna_total": true,
+    "texto": "TOTAL 9 3.999 569 536 8 50 191 5.362"
+   },
+   "jueces_en_activo": {
+    "valor": 5219.0,
+    "linea_pdf": 388,
+    "texto": "Total 162 1.339 1.718 1.514 486 5.219 47,6 16,4"
+   },
+   "fiscales_plantilla_organica": {
+    "valor": 2407.0,
+    "linea_pdf": 463,
+    "columna_total": true,
+    "texto": "Total 25 1.778 604 2.407"
+   },
+   "cuerpo_secretarial": {
+    "tipo": "secretarios",
+    "linea_pdf": 496,
+    "texto": "Total 4.193 3.665",
+    "plantilla": 4193.0,
+    "efectivos": 3665.0
+   },
+   "funcionarios_judiciales": {
+    "valor": 44896.0,
+    "linea_pdf": 564,
+    "columna_total": false,
+    "texto": "Total 1.099 13.971 21.535 9.390",
+    "nota": "suma Gestión+Tramitación+Auxilio; excluye la columna de médicos forenses",
+    "fuente_pdf": "Fuente: Ministerio de Justicia. Datos a 1 de enero de 2014."
+   }
+  },
+  "2015": {
+   "plazas_jueces_constituidas": {
+    "valor": 5847.0,
+    "linea_pdf": 316,
+    "columna_total": true,
+    "texto": "TOTAL 9 4.113 569 536 8 217 395 5.847"
+   },
+   "jueces_en_activo": {
+    "valor": 5219.0,
+    "linea_pdf": 414,
+    "texto": "Total 162 1.339 1.718 1.514 486 5.219 47,6 16,4"
+   },
+   "fiscales_plantilla_organica": {
+    "valor": 2407.0,
+    "linea_pdf": 489,
+    "columna_total": true,
+    "texto": "Total 25 1.778 604 2.407"
+   },
+   "cuerpo_secretarial": {
+    "tipo": "secretarios",
+    "linea_pdf": 523,
+    "texto": "Total 4.308 3.615",
+    "plantilla": 4308.0,
+    "efectivos": 3615.0
+   },
+   "funcionarios_judiciales": {
+    "valor": 44937.0,
+    "linea_pdf": 589,
+    "columna_total": false,
+    "texto": "Total 1.099 13.980 21.556 9.401",
+    "nota": "suma Gestión+Tramitación+Auxilio; excluye la columna de médicos forenses",
+    "fuente_pdf": "Fuente: Ministerio de Justicia. Datos a 1 de enero de 2015."
+   }
+  },
+  "2016": {
+   "plazas_jueces_constituidas": {
+    "valor": 5692.0,
+    "linea_pdf": 304,
+    "columna_total": true,
+    "texto": "TOTAL 9 4.112 571 536 8 217 239 5.692"
+   },
+   "jueces_en_activo": {
+    "valor": 5366.0,
+    "linea_pdf": 398,
+    "texto": "Total 137 1.227 1.675 1.734 593 5.366 48,5 17,4"
+   },
+   "fiscales_plantilla_organica": {
+    "valor": 2473.0,
+    "linea_pdf": 472,
+    "columna_total": true,
+    "texto": "Total 25 1.825 623 2.473"
+   },
+   "cuerpo_secretarial": {
+    "tipo": "laj",
+    "linea_pdf": 507,
+    "texto": "Total 4.185 3.701",
+    "plantilla": 4185.0,
+    "efectivos": 3701.0
+   },
+   "funcionarios_judiciales": {
+    "valor": 39042.0,
+    "linea_pdf": 571,
+    "columna_total": true,
+    "texto": "Total 12.034 19.262 7.746 39.042",
+    "fuente_pdf": "Fuente: Ministerio de Justicia. Datos a 1 de enero de 2016."
+   },
+   "funcionarios_en_fiscalias": {
+    "valor": 2061.0,
+    "linea_pdf": 610,
+    "columna_total": true,
+    "texto": "Total 329 1.332 400 2.061"
+   },
+   "funcionarios_en_juzgados_de_paz": {
+    "valor": 2688.0,
+    "linea_pdf": 646,
+    "columna_total": true,
+    "texto": "Total 1.423 196 1.069 2.688"
+   }
+  },
+  "2017": {
+   "plazas_jueces_constituidas": {
+    "valor": 5507.0,
+    "linea_pdf": 343,
+    "columna_total": true,
+    "texto": "TOTAL 9 4.116 571 536 8 217 50 5.507"
+   },
+   "jueces_en_activo": {
+    "valor": 5367.0,
+    "linea_pdf": 437,
+    "texto": "TOTAL 119 1.107 1.685 1.783 665 8 5.367 49,3 18,2"
+   },
+   "fiscales_plantilla_organica": {
+    "valor": 2473.0,
+    "linea_pdf": 532,
+    "columna_total": true,
+    "texto": "TOTAL 25 1.825 623 2.473"
+   },
+   "cuerpo_secretarial": {
+    "tipo": "laj",
+    "linea_pdf": 567,
+    "texto": "TOTAL 4.185 3.746",
+    "plantilla": 4185.0,
+    "efectivos": 3746.0
+   },
+   "funcionarios_judiciales": {
+    "valor": 39058.0,
+    "linea_pdf": 635,
+    "columna_total": true,
+    "texto": "TOTAL 12.040 19.271 7.747 39.058",
+    "fuente_pdf": "Fuente: Ministerio de Justicia. Datos a 1 de enero de 2017."
+   },
+   "funcionarios_en_fiscalias": {
+    "valor": 2069.0,
+    "linea_pdf": 676,
+    "columna_total": true,
+    "texto": "TOTAL 329 1.338 402 2.069"
+   },
+   "funcionarios_en_juzgados_de_paz": {
+    "valor": 2685.0,
+    "linea_pdf": 711,
+    "columna_total": true,
+    "texto": "TOTAL 1.420 195 1.070 2.685"
+   }
+  },
+  "2018": {
+   "plazas_jueces_constituidas": {
+    "valor": 5552.0,
+    "linea_pdf": 345,
+    "columna_total": true,
+    "texto": "TOTAL 9 4.184 571 545 8 217 18 5.552"
+   },
+   "jueces_en_activo": {
+    "valor": 5377.0,
+    "linea_pdf": 439,
+    "texto": "TOTAL 65 1.003 1.712 1.847 723 28 5.377 50,1 18,9"
+   },
+   "fiscales_plantilla_organica": {
+    "valor": 2473.0,
+    "linea_pdf": 535,
+    "columna_total": true,
+    "texto": "TOTAL 25 1.825 623 2.473"
+   },
+   "cuerpo_secretarial": {
+    "tipo": "laj",
+    "linea_pdf": 570,
+    "texto": "TOTAL 4.209 3.802",
+    "plantilla": 4209.0,
+    "efectivos": 3802.0
+   },
+   "funcionarios_judiciales": {
+    "valor": 39058.0,
+    "linea_pdf": 642,
+    "columna_total": true,
+    "texto": "TOTAL 12.087 19.379 7.770 39.058",
+    "fuente_pdf": "Fuente: Ministerio de Justicia. Datos a 1 de enero de 2018."
+   },
+   "funcionarios_en_fiscalias": {
+    "valor": 2091.0,
+    "linea_pdf": 688,
+    "columna_total": true,
+    "texto": "TOTAL 333 1.350 408 2.091"
+   },
+   "funcionarios_en_juzgados_de_paz": {
+    "valor": 2690.0,
+    "linea_pdf": 723,
+    "columna_total": true,
+    "texto": "TOTAL 1.421 197 1.072 2.690"
+   }
+  },
+  "2019": {
+   "plazas_jueces_constituidas": {
+    "valor": 5594.0,
+    "linea_pdf": 346,
+    "columna_total": true,
+    "texto": "TOTAL 9 4.204 571 545 8 217 40 5.594"
+   },
+   "jueces_en_activo": {
+    "valor": 5419.0,
+    "linea_pdf": 440,
+    "texto": "TOTAL 110 950 1.704 1.862 747 46 5.419 50,4 19,2"
+   },
+   "fiscales_plantilla_organica": {
+    "valor": 2553.0,
+    "linea_pdf": 536,
+    "columna_total": true,
+    "texto": "TOTAL 26 1.889 638 2.553"
+   },
+   "cuerpo_secretarial": {
+    "tipo": "laj",
+    "linea_pdf": 573,
+    "texto": "TOTAL 4.280 3.807",
+    "plantilla": 4280.0,
+    "efectivos": 3807.0
+   },
+   "funcionarios_judiciales": {
+    "valor": 39924.0,
+    "linea_pdf": 644,
+    "columna_total": true,
+    "texto": "TOTAL 12.305 19.737 7.882 39.924",
+    "fuente_pdf": "Fuente: Ministerio de Justicia. Datos a 1 de enero de 2019."
+   },
+   "funcionarios_en_fiscalias": {
+    "valor": 2125.0,
+    "linea_pdf": 690,
+    "columna_total": true,
+    "texto": "TOTAL 336 1.378 411 2.125"
+   },
+   "funcionarios_en_juzgados_de_paz": {
+    "valor": 2700.0,
+    "linea_pdf": 725,
+    "columna_total": true,
+    "texto": "TOTAL 1.426 197 1.077 2.700"
+   }
+  },
+  "2020": {
+   "plazas_jueces_constituidas": {
+    "valor": 5635.0,
+    "linea_pdf": 358,
+    "columna_total": true,
+    "texto": "TOTAL 10 4.272 571 557 8 217 5.635"
+   },
+   "jueces_en_activo": {
+    "valor": 5341.0,
+    "linea_pdf": 445,
+    "texto": "Total 72 832 1713 1854 843 27 5.341 51,1 20,0"
+   },
+   "fiscales_plantilla_organica": {
+    "valor": 2553.0,
+    "linea_pdf": 542,
+    "columna_total": true,
+    "texto": "TOTAL 26 1.889 638 2.553"
+   },
+   "cuerpo_secretarial": {
+    "tipo": "laj",
+    "linea_pdf": 579,
+    "texto": "TOTAL 4.310 3.746",
+    "plantilla": 4310.0,
+    "efectivos": 3746.0
+   },
+   "funcionarios_judiciales": {
+    "valor": 40155.0,
+    "linea_pdf": 643,
+    "columna_total": true,
+    "texto": "TOTAL 12.369 19.863 7.923 40.155",
+    "fuente_pdf": "Fuente: Ministerio de Justicia. Datos a 1 de enero de 2020."
+   },
+   "funcionarios_en_fiscalias": {
+    "valor": 2154.0,
+    "linea_pdf": 684,
+    "columna_total": true,
+    "texto": "TOTAL 340 1.397 417 2.154"
+   },
+   "funcionarios_en_juzgados_de_paz": {
+    "valor": 2718.0,
+    "linea_pdf": 718,
+    "columna_total": true,
+    "texto": "TOTAL 1.433 197 1.088 2.718"
+   }
+  },
+  "2021": {
+   "plazas_jueces_constituidas": {
+    "valor": 5668.0,
+    "linea_pdf": 360,
+    "columna_total": true,
+    "texto": "TOTAL 10 4.289 572 572 8 217 5.668"
+   },
+   "jueces_en_activo": {
+    "valor": 5320.0,
+    "linea_pdf": 448,
+    "texto": "Total 77 763 1678 1810 955 37 5.320 51,6 20,5"
+   },
+   "fiscales_plantilla_organica": {
+    "valor": 2553.0,
+    "linea_pdf": 592,
+    "columna_total": true,
+    "texto": "TOTAL 26 1.889 638 2.553"
+   },
+   "cuerpo_secretarial": {
+    "tipo": "laj",
+    "linea_pdf": 629,
+    "texto": "TOTAL 4.422 3.563",
+    "plantilla": 4422.0,
+    "efectivos": 3563.0
+   },
+   "funcionarios_judiciales": {
+    "valor": 40829.0,
+    "linea_pdf": 693,
+    "columna_total": true,
+    "texto": "TOTAL 12.536 20.250 8.043 40.829",
+    "fuente_pdf": "Fuente: Ministerio de Justicia. Datos a 1 de enero de 2021."
+   },
+   "funcionarios_en_fiscalias": {
+    "valor": 2288.0,
+    "linea_pdf": 734,
+    "columna_total": true,
+    "texto": "TOTAL 361 1.496 431 2.288"
+   },
+   "funcionarios_en_juzgados_de_paz": {
+    "valor": 2700.0,
+    "linea_pdf": 768,
+    "columna_total": true,
+    "texto": "TOTAL 1.423 197 1.080 2.700"
+   }
+  },
+  "2022": {
+   "plazas_jueces_constituidas": {
+    "valor": 5728.0,
+    "linea_pdf": 358,
+    "columna_total": true,
+    "texto": "TOTAL 12 4.336 573 578 8 221 5.728"
+   },
+   "jueces_en_activo": {
+    "valor": 5408.0,
+    "linea_pdf": 451,
+    "texto": "Total 155 767 1.612 1.785 1.054 35 5.408 51,6 20,5"
+   },
+   "fiscales_plantilla_organica": {
+    "valor": 2553.0,
+    "linea_pdf": 593,
+    "columna_total": true,
+    "texto": "TOTAL 26 1.889 638 2.553"
+   },
+   "cuerpo_secretarial": {
+    "tipo": "laj",
+    "linea_pdf": 630,
+    "texto": "TOTAL 4.389 3.543",
+    "plantilla": 4389.0,
+    "efectivos": 3543.0
+   },
+   "funcionarios_judiciales": {
+    "valor": 41483.0,
+    "linea_pdf": 701,
+    "columna_total": true,
+    "texto": "TOTAL 12.772 20.490 8.221 41.483",
+    "fuente_pdf": "Fuente: Ministerio de Justicia. Datos a 1 de enero de 2022."
+   },
+   "funcionarios_en_fiscalias": {
+    "valor": 2312.0,
+    "linea_pdf": 747,
+    "columna_total": true,
+    "texto": "TOTAL 367 1511 434 2.312"
+   },
+   "funcionarios_en_juzgados_de_paz": {
+    "valor": 2481.0,
+    "linea_pdf": 781,
+    "columna_total": true,
+    "texto": "TOTAL 1.302 175 1.004 2.481"
+   }
+  },
+  "2023": {
+   "plazas_jueces_constituidas": {
+    "valor": 5799.0,
+    "linea_pdf": 358,
+    "columna_total": true,
+    "texto": "TOTAL 12 4.399 574 585 8 221 5.799"
+   },
+   "jueces_en_activo": {
+    "valor": 5343.0,
+    "linea_pdf": 450,
+    "texto": "Total 99 715 1.532 1.774 1.186 37 5.343 52,3 21,1"
+   },
+   "fiscales_plantilla_organica": {
+    "valor": 2613.0,
+    "linea_pdf": 603,
+    "columna_total": true,
+    "texto": "TOTAL 26 1.941 646 2.613"
+   },
+   "cuerpo_secretarial": {
+    "tipo": "laj",
+    "linea_pdf": 640,
+    "texto": "TOTAL 4.456 3.449",
+    "plantilla": 4456.0,
+    "efectivos": 3449.0
+   },
+   "funcionarios_judiciales": {
+    "valor": 42699.0,
+    "linea_pdf": 711,
+    "columna_total": true,
+    "texto": "TOTAL 13.114 21.228 8.357 42.699",
+    "fuente_pdf": "Fuente: Ministerio de Justicia. Datos a 1 de enero de 2023."
+   },
+   "funcionarios_en_fiscalias": {
+    "valor": 2312.0,
+    "linea_pdf": 757,
+    "columna_total": true,
+    "texto": "TOTAL 373 1511 434 2.312"
+   },
+   "funcionarios_en_juzgados_de_paz": {
+    "valor": 2477.0,
+    "linea_pdf": 791,
+    "columna_total": true,
+    "texto": "TOTAL 1.300 175 1.002 2.477"
+   }
+  },
+  "2025": {
+   "plazas_jueces_constituidas": {
+    "valor": 5846.0,
+    "linea_pdf": 361,
+    "columna_total": true,
+    "texto": "TOTAL 12 4.437 576 591 8 222 5.846"
+   },
+   "jueces_en_activo": {
+    "valor": 5431.0,
+    "linea_pdf": 452,
+    "texto": "Total 121 819 1.364 1.724 1.355 48 5.431 52,4 21,2"
+   },
+   "fiscales_plantilla_organica": {
+    "valor": 2762.0,
+    "linea_pdf": 608,
+    "columna_total": true,
+    "texto": "TOTAL 30 2.305 427 2.762"
+   },
+   "cuerpo_secretarial": {
+    "tipo": "laj",
+    "linea_pdf": 642,
+    "texto": "TOTAL 4.543 3.512",
+    "plantilla": 4543.0,
+    "efectivos": 3512.0
+   },
+   "funcionarios_judiciales": {
+    "valor": 42528.0,
+    "linea_pdf": 716,
+    "columna_total": true,
+    "texto": "TOTAL 13.059 21.150 8.319 42.528",
+    "fuente_pdf": "13 Fuente: Ministerio de Presidencia, Justicia y Relaciones con las Cortes. Datos a 1 de enero de 2025."
+   },
+   "funcionarios_en_fiscalias": {
+    "valor": 2401.0,
+    "linea_pdf": 761,
+    "columna_total": true,
+    "texto": "TOTAL 387 1.577 437 2.401"
+   },
+   "funcionarios_en_juzgados_de_paz": {
+    "valor": 2489.0,
+    "linea_pdf": 798,
+    "columna_total": true,
+    "texto": "TOTAL 1.306 175 1.008 2.489"
+   }
+  }
+ }
+}

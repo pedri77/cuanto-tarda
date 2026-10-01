@@ -1,0 +1,249 @@
+{
+ "meta": {
+  "source": "Cruce: jueces (CGPJ «Justicia dato a dato», a 1 de enero del año Y) × asuntos ingresados/resueltos del año Y (CGPJ series estadísticas, data/nacional_anual.json) × población INE a 1 de enero (raw/ine_poblacion.json)",
+  "period": "solo años con jueces Y asuntos: 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2025",
+  "unit": {
+   "ingresados_por_juez_activo": "asuntos ingresados en el año / jueces en activo a 1 de enero",
+   "resueltos_por_juez_activo": "asuntos resueltos en el año / jueces en activo a 1 de enero",
+   "ingresados_por_plaza": "asuntos ingresados / plazas constituidas",
+   "jueces_activo_por_100k": "jueces en activo por 100.000 hab.",
+   "plazas_por_100k": "plazas constituidas por 100.000 hab. (debe coincidir con la cifra que publica el CGPJ, ±0,1)"
+  },
+  "caveat": "Es un promedio bruto nacional: todos los asuntos de todos los órdenes entre todos los jueces, incluidos los de órganos colegiados y centrales. No mide carga real por juzgado ni ponderación por tipo de asunto. Sirve para ver la tendencia, no para fijar 'cuántos jueces faltan'. RUPTURA 2016: el ingresado penal pasa de 5,81 M (2015) a 3,37 M (2016) por cambio de criterio en la serie de asuntos (reforma penal de 2015 / registro de diligencias), no porque bajase la carga: comparar solo dentro de cada tramo, 2009-2015 y 2016-2025. 2015: ratio por plaza distorsionado por los 395 jueces en expectativa de destino (ver descartes). Jueces en activo excluye sustitutos y suplentes (1.112 plazas de justicia interina propuestas para 2024/25 según el CGPJ): el ratio real por persona que juzga es menor."
+ },
+ "por_anio": {
+  "2003": {
+   "asuntos_ingresados": 7324795,
+   "asuntos_resueltos": 7278222,
+   "jueces_en_activo": null,
+   "plazas_constituidas": 4109.0,
+   "poblacion_ine": 41827836.0,
+   "ingresados_por_plaza": 1782.6,
+   "plazas_por_100k": 9.82
+  },
+  "2005": {
+   "asuntos_ingresados": 7723132,
+   "asuntos_resueltos": 7626299,
+   "jueces_en_activo": null,
+   "plazas_constituidas": 4413.0,
+   "poblacion_ine": 43296335.0,
+   "ingresados_por_plaza": 1750.1,
+   "plazas_por_100k": 10.19
+  },
+  "2006": {
+   "asuntos_ingresados": 8068912,
+   "asuntos_resueltos": 7893286,
+   "jueces_en_activo": null,
+   "plazas_constituidas": 4576.0,
+   "poblacion_ine": 44009969.0,
+   "ingresados_por_plaza": 1763.3,
+   "plazas_por_100k": 10.4
+  },
+  "2007": {
+   "asuntos_ingresados": 8362377,
+   "asuntos_resueltos": 8277941,
+   "jueces_en_activo": null,
+   "plazas_constituidas": 4543.0,
+   "poblacion_ine": 44784659.0,
+   "ingresados_por_plaza": 1840.7,
+   "plazas_por_100k": 10.14
+  },
+  "2008": {
+   "asuntos_ingresados": 9045497,
+   "asuntos_resueltos": 8647384,
+   "jueces_en_activo": null,
+   "plazas_constituidas": 4674.0,
+   "poblacion_ine": 45668938.0,
+   "ingresados_por_plaza": 1935.3,
+   "plazas_por_100k": 10.23
+  },
+  "2009": {
+   "asuntos_ingresados": 9567676,
+   "asuntos_resueltos": 9156117,
+   "jueces_en_activo": 4439.0,
+   "plazas_constituidas": 4836.0,
+   "poblacion_ine": 46239271.0,
+   "ingresados_por_juez_activo": 2155.4,
+   "resueltos_por_juez_activo": 2062.7,
+   "ingresados_por_plaza": 1978.4,
+   "jueces_activo_por_100k": 9.6,
+   "plazas_por_100k": 10.46
+  },
+  "2010": {
+   "asuntos_ingresados": 9427927,
+   "asuntos_resueltos": 9284819,
+   "jueces_en_activo": 4536.0,
+   "plazas_constituidas": 4984.0,
+   "poblacion_ine": 46486621.0,
+   "ingresados_por_juez_activo": 2078.5,
+   "resueltos_por_juez_activo": 2046.9,
+   "ingresados_por_plaza": 1891.6,
+   "jueces_activo_por_100k": 9.76,
+   "plazas_por_100k": 10.72
+  },
+  "2011": {
+   "asuntos_ingresados": 9140567,
+   "asuntos_resueltos": 9235474,
+   "jueces_en_activo": 4689.0,
+   "plazas_constituidas": 5171.0,
+   "poblacion_ine": 46667175.0,
+   "ingresados_por_juez_activo": 1949.4,
+   "resueltos_por_juez_activo": 1969.6,
+   "ingresados_por_plaza": 1767.7,
+   "jueces_activo_por_100k": 10.05,
+   "plazas_por_100k": 11.08
+  },
+  "2012": {
+   "asuntos_ingresados": 9108037,
+   "asuntos_resueltos": 9232860,
+   "jueces_en_activo": 4890.0,
+   "plazas_constituidas": 5171.0,
+   "poblacion_ine": 46818216.0,
+   "ingresados_por_juez_activo": 1862.6,
+   "resueltos_por_juez_activo": 1888.1,
+   "ingresados_por_plaza": 1761.4,
+   "jueces_activo_por_100k": 10.44,
+   "plazas_por_100k": 11.04
+  },
+  "2013": {
+   "asuntos_ingresados": 8749336,
+   "asuntos_resueltos": 8993923,
+   "jueces_en_activo": 5036.0,
+   "plazas_constituidas": 5211.0,
+   "poblacion_ine": 46727890.0,
+   "ingresados_por_juez_activo": 1737.4,
+   "resueltos_por_juez_activo": 1785.9,
+   "ingresados_por_plaza": 1679.0,
+   "jueces_activo_por_100k": 10.78,
+   "plazas_por_100k": 11.15
+  },
+  "2014": {
+   "asuntos_ingresados": 8749452,
+   "asuntos_resueltos": 8887112,
+   "jueces_en_activo": 5219.0,
+   "plazas_constituidas": 5362.0,
+   "poblacion_ine": 46512199.0,
+   "ingresados_por_juez_activo": 1676.5,
+   "resueltos_por_juez_activo": 1702.8,
+   "ingresados_por_plaza": 1631.8,
+   "jueces_activo_por_100k": 11.22,
+   "plazas_por_100k": 11.53
+  },
+  "2015": {
+   "asuntos_ingresados": 8478731,
+   "asuntos_resueltos": 8658440,
+   "jueces_en_activo": 5219.0,
+   "plazas_constituidas": 5847.0,
+   "poblacion_ine": 46449565.0,
+   "ingresados_por_juez_activo": 1624.6,
+   "resueltos_por_juez_activo": 1659.0,
+   "ingresados_por_plaza": 1450.1,
+   "jueces_activo_por_100k": 11.24,
+   "plazas_por_100k": 12.59
+  },
+  "2016": {
+   "asuntos_ingresados": 5813170,
+   "asuntos_resueltos": 6010503,
+   "jueces_en_activo": 5366.0,
+   "plazas_constituidas": 5692.0,
+   "poblacion_ine": 46440099.0,
+   "ingresados_por_juez_activo": 1083.3,
+   "resueltos_por_juez_activo": 1120.1,
+   "ingresados_por_plaza": 1021.3,
+   "jueces_activo_por_100k": 11.55,
+   "plazas_por_100k": 12.26
+  },
+  "2017": {
+   "asuntos_ingresados": 5875887,
+   "asuntos_resueltos": 5749315,
+   "jueces_en_activo": 5367.0,
+   "plazas_constituidas": 5507.0,
+   "poblacion_ine": 46527039.0,
+   "ingresados_por_juez_activo": 1094.8,
+   "resueltos_por_juez_activo": 1071.2,
+   "ingresados_por_plaza": 1067.0,
+   "jueces_activo_por_100k": 11.54,
+   "plazas_por_100k": 11.84
+  },
+  "2018": {
+   "asuntos_ingresados": 5994102,
+   "asuntos_resueltos": 5781667,
+   "jueces_en_activo": 5377.0,
+   "plazas_constituidas": 5552.0,
+   "poblacion_ine": 46658447.0,
+   "ingresados_por_juez_activo": 1114.8,
+   "resueltos_por_juez_activo": 1075.3,
+   "ingresados_por_plaza": 1079.6,
+   "jueces_activo_por_100k": 11.52,
+   "plazas_por_100k": 11.9
+  },
+  "2019": {
+   "asuntos_ingresados": 6279302,
+   "asuntos_resueltos": 6079137,
+   "jueces_en_activo": 5419.0,
+   "plazas_constituidas": 5594.0,
+   "poblacion_ine": 46937060.0,
+   "ingresados_por_juez_activo": 1158.8,
+   "resueltos_por_juez_activo": 1121.8,
+   "ingresados_por_plaza": 1122.5,
+   "jueces_activo_por_100k": 11.55,
+   "plazas_por_100k": 11.92
+  },
+  "2020": {
+   "asuntos_ingresados": 5529954,
+   "asuntos_resueltos": 5228031,
+   "jueces_en_activo": 5341.0,
+   "plazas_constituidas": 5635.0,
+   "poblacion_ine": 47332614.0,
+   "ingresados_por_juez_activo": 1035.4,
+   "resueltos_por_juez_activo": 978.8,
+   "ingresados_por_plaza": 981.4,
+   "jueces_activo_por_100k": 11.28,
+   "plazas_por_100k": 11.91
+  },
+  "2021": {
+   "asuntos_ingresados": 6273090,
+   "asuntos_resueltos": 6323819,
+   "jueces_en_activo": 5320.0,
+   "plazas_constituidas": 5668.0,
+   "poblacion_ine": 47398695.0,
+   "ingresados_por_juez_activo": 1179.2,
+   "resueltos_por_juez_activo": 1188.7,
+   "ingresados_por_plaza": 1106.8,
+   "jueces_activo_por_100k": 11.22,
+   "plazas_por_100k": 11.96
+  },
+  "2022": {
+   "asuntos_ingresados": 6685301,
+   "asuntos_resueltos": 6460255,
+   "jueces_en_activo": 5408.0,
+   "plazas_constituidas": 5728.0,
+   "poblacion_ine": 47432893.0,
+   "ingresados_por_juez_activo": 1236.2,
+   "resueltos_por_juez_activo": 1194.6,
+   "ingresados_por_plaza": 1167.1,
+   "jueces_activo_por_100k": 11.4,
+   "plazas_por_100k": 12.08
+  },
+  "2023": {
+   "asuntos_ingresados": 6999331,
+   "asuntos_resueltos": 6441132,
+   "jueces_en_activo": 5343.0,
+   "plazas_constituidas": 5799.0,
+   "poblacion_ine": null,
+   "ingresados_por_juez_activo": 1310.0,
+   "resueltos_por_juez_activo": 1205.5,
+   "ingresados_por_plaza": 1207.0
+  },
+  "2025": {
+   "asuntos_ingresados": 7550806,
+   "asuntos_resueltos": 7437033,
+   "jueces_en_activo": 5431.0,
+   "plazas_constituidas": 5846.0,
+   "poblacion_ine": null,
+   "ingresados_por_juez_activo": 1390.3,
+   "resueltos_por_juez_activo": 1369.4,
+   "ingresados_por_plaza": 1291.6
+  }
+ }
+}

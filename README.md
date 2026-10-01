@@ -44,11 +44,53 @@ año. Y ahí la serie es contundente.
 Definiciones literales del CGPJ, reproducidas en [`data/sources.json`](data/sources.json). **Congestión
 alta no es sinónimo de lentitud**: significa que hay muchos asuntos vivos por cada uno que se cierra.
 
+## Quién sostiene el sistema: plazas, personal y carga
+
+La demanda (asuntos) ya estaba medida; falta la capacidad. Añadida con las fuentes oficiales:
+
+| Dato (2025 salvo que se diga) | Valor | Fuente |
+|---|---:|---|
+| Plazas de juez y magistrado constituidas | 5.846 | CGPJ «La Justicia dato a dato» |
+| Jueces y magistrados en activo | 5.431 | CGPJ |
+| Letrados de la Administración de Justicia | 3.512 efectivos de 4.543 plazas (**22,7 % sin cubrir**) | CGPJ |
+| Funcionarios de los cuerpos generales | 42.528 | CGPJ (incluye CCAA transferidas) |
+| Fiscales en plantilla orgánica | 2.762 | CGPJ |
+
+**El cruce que responde a la pregunta**: asuntos ingresados por juez en activo. En el tramo homogéneo
+(la serie de asuntos cambia de criterio en 2016) pasa de **1.083 a 1.390 asuntos por juez**: un
+**+28 % de carga** con los jueces en activo prácticamente planos (5.366 → 5.431).
+
+**Comparación europea** (CEPEJ 2024, la única con definición común): España tiene **11,1 jueces por
+100.000 habitantes frente a 23,4 de mediana UE** (menos de la mitad), pero **103,2 de personal no juez
+frente a 59,4** (casi el doble) y **5,7 fiscales frente a 14,5**. El modelo español carga el peso en
+personal de apoyo, no en jueces.
+
+**Plazas pedidas vs creadas** (CGPJ, 2019-2023): pidió crear **882 unidades judiciales y se crearon
+308**. El CGPJ cifra el déficit estructural en **421 unidades**, contaba **277 vacantes** de juez en
+junio de 2024 y considera necesario que entren **350 jueces al año hasta 2033**.
+
+### Hasta dónde se puede responder a «¿es suficiente el personal?»
+
+**Solo por comparación europea y por lo que afirma el propio CGPJ, no por necesidad calculada.** No
+existen módulos de carga oficiales que permitan calcular cuántos juzgados o jueces harían falta, y los
+efectivos reales (personas) de los cuerpos generales y de la Fiscalía en las comunidades con
+competencias transferidas no están en ninguna fuente estatal. La frase sostenible es: *menos de la
+mitad de jueces por habitante que la mediana europea; el CGPJ cifra el déficit en 421 unidades; desde
+2016 cada juez recibe un 28 % más de asuntos con la misma plantilla; cuántos faltan exactamente, nadie
+lo publica.*
+
+**Advertencias que la web muestra:** plazas ≠ activos ≠ sustitutos (nunca se suman); España cambia de
+criterio al reportar al CEPEJ (5.431 = activos en 2024; 5.728 = plazas en 2022), así que se compara un
+solo año y no se dibuja evolución; la serie de Eurostat rompe en 2017 y no se usa; la población INE del
+repo llega a 2022, así que las ratios por habitante propias solo van hasta 2022.
+
 ## Reproducirlo
 
 ```bash
 python3 scripts/cgpj_fetch.py     # descarga las series XLSX del CGPJ + población INE a raw/ (cachea)
 python3 scripts/cgpj_build.py     # agrega y escribe data/*.json (unos segundos)
+python3 scripts/plantilla_fetch.py   # plantillas: CGPJ dato a dato, CEPEJ, plan estratégico (PDFs a raw/)
+python3 scripts/plantilla_build.py   # escribe data/plantilla_*.json
 ```
 
 | Fichero | Contenido |
