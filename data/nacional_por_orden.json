@@ -1,0 +1,182 @@
+{
+ "meta": {
+  "source": "CGPJ, Sección de Estadística Judicial. Series estadísticas",
+  "url": "https://www.poderjudicial.es/stfls/ESTADISTICA/FICHEROS/3002 Series estadisticas/",
+  "pagina": "https://www.poderjudicial.es/cgpj/es/Temas/Estadistica-Judicial/Estudios-e-Informes/Informes-por-territorios-sobre-la-actividad-de-los-organos-judiciales/Informes-por-territorios-sobre-la-actividad-de-los-organos-judiciales",
+  "unit": "asuntos",
+  "period": "2001-2025, datos anuales",
+  "nota": "En los datos de España no están incluidos los órganos centrales (Tribunal Supremo, Audiencia Nacional, juzgados centrales), según avisa el propio fichero."
+ },
+ "por_orden": {
+  "2021": {
+   "civil": {
+    "ingresados": 2587127,
+    "resueltos": 2588065,
+    "en_tramite_final": 1743864,
+    "tasa_congestion": 1.6709897162551945,
+    "tasa_resolucion": 1.0003625643426086,
+    "tasa_pendencia": 0.6738099699968896
+   },
+   "penal": {
+    "ingresados": 3015318,
+    "resueltos": 3056683,
+    "en_tramite_final": 817484,
+    "tasa_congestion": 1.2571506433607933,
+    "tasa_resolucion": 1.0137182877560509,
+    "tasa_pendencia": 0.2674415371171953
+   },
+   "contencioso": {
+    "ingresados": 224622,
+    "resueltos": 224516,
+    "en_tramite_final": 220878,
+    "tasa_congestion": 1.9619893459708886,
+    "tasa_resolucion": 0.9995280960903207,
+    "tasa_pendencia": 0.983796255055319
+   },
+   "social": {
+    "ingresados": 445837,
+    "resueltos": 454344,
+    "en_tramite_final": 362266,
+    "tasa_congestion": 1.8117065483422252,
+    "tasa_resolucion": 1.019080964567768,
+    "tasa_pendencia": 0.7973385804588594
+   }
+  },
+  "2022": {
+   "civil": {
+    "ingresados": 2809693,
+    "resueltos": 2637463,
+    "en_tramite_final": 1917991,
+    "tasa_congestion": 1.7261091435216342,
+    "tasa_resolucion": 0.9391979762350132,
+    "tasa_pendencia": 0.7266081183611532
+   },
+   "penal": {
+    "ingresados": 3216590,
+    "resueltos": 3167861,
+    "en_tramite_final": 891682,
+    "tasa_congestion": 1.2734387651478396,
+    "tasa_resolucion": 0.9847201623665377,
+    "tasa_pendencia": 0.28159380509602194
+   },
+   "contencioso": {
+    "ingresados": 219265,
+    "resueltos": 223686,
+    "en_tramite_final": 219173,
+    "tasa_congestion": 1.9676823761880493,
+    "tasa_resolucion": 1.0201628166830092,
+    "tasa_pendencia": 0.9798243966989441
+   },
+   "social": {
+    "ingresados": 439583,
+    "resueltos": 431068,
+    "en_tramite_final": 367136,
+    "tasa_congestion": 1.860145035122069,
+    "tasa_resolucion": 0.9806293691976259,
+    "tasa_pendencia": 0.8516892926406042
+   }
+  },
+  "2023": {
+   "civil": {
+    "ingresados": 2985083,
+    "resueltos": 2627924,
+    "en_tramite_final": 2273359,
+    "tasa_congestion": 1.8648142031504715,
+    "tasa_resolucion": 0.8803520706124419,
+    "tasa_pendencia": 0.865077909406817
+   },
+   "penal": {
+    "ingresados": 3342849,
+    "resueltos": 3210980,
+    "en_tramite_final": 1050010,
+    "tasa_congestion": 1.3186731153728768,
+    "tasa_resolucion": 0.9605519124555133,
+    "tasa_pendencia": 0.32700608536957565
+   },
+   "contencioso": {
+    "ingresados": 207978,
+    "resueltos": 204268,
+    "en_tramite_final": 226942,
+    "tasa_congestion": 2.091115593240253,
+    "tasa_resolucion": 0.9821615747819481,
+    "tasa_pendencia": 1.1110012336734094
+   },
+   "social": {
+    "ingresados": 463307,
+    "resueltos": 397803,
+    "en_tramite_final": 425977,
+    "tasa_congestion": 2.08757349743466,
+    "tasa_resolucion": 0.8586164249622821,
+    "tasa_pendencia": 1.0708240008245287
+   }
+  },
+  "2024": {
+   "civil": {
+    "ingresados": 3563053,
+    "resueltos": 3153313,
+    "en_tramite_final": 2688587,
+    "tasa_congestion": 1.8509095037505,
+    "tasa_resolucion": 0.8850031139025998,
+    "tasa_pendencia": 0.8526229397462288
+   },
+   "penal": {
+    "ingresados": 3500524,
+    "resueltos": 3452030,
+    "en_tramite_final": 1124429,
+    "tasa_congestion": 1.3182197141971537,
+    "tasa_resolucion": 0.986146645473649,
+    "tasa_pendencia": 0.3257297879798264
+   },
+   "contencioso": {
+    "ingresados": 207581,
+    "resueltos": 216410,
+    "en_tramite_final": 225647,
+    "tasa_congestion": 2.00786932212005,
+    "tasa_resolucion": 1.0425327944272356,
+    "tasa_pendencia": 1.0426828704773348
+   },
+   "social": {
+    "ingresados": 528533,
+    "resueltos": 469686,
+    "en_tramite_final": 480656,
+    "tasa_congestion": 2.0322300430500375,
+    "tasa_resolucion": 0.8886597431002417,
+    "tasa_pendencia": 1.023356029347266
+   }
+  },
+  "2025": {
+   "civil": {
+    "ingresados": 3287980,
+    "resueltos": 3308215,
+    "en_tramite_final": 2672464,
+    "tasa_congestion": 1.806584819910435,
+    "tasa_resolucion": 1.0061542345148085,
+    "tasa_pendencia": 0.8078265771722817
+   },
+   "penal": {
+    "ingresados": 3550118,
+    "resueltos": 3451206,
+    "en_tramite_final": 1255950,
+    "tasa_congestion": 1.3544679743834473,
+    "tasa_resolucion": 0.9721383908929224,
+    "tasa_pendencia": 0.3639162657923056
+   },
+   "contencioso": {
+    "ingresados": 198961,
+    "resueltos": 212680,
+    "en_tramite_final": 219492,
+    "tasa_congestion": 1.9964641715252962,
+    "tasa_resolucion": 1.0689532119360075,
+    "tasa_pendencia": 1.0320293398533007
+   },
+   "social": {
+    "ingresados": 513628,
+    "resueltos": 464827,
+    "en_tramite_final": 525652,
+    "tasa_congestion": 2.139040976535356,
+    "tasa_resolucion": 0.9049876564361756,
+    "tasa_pendencia": 1.1308551353514318
+   }
+  }
+ }
+}

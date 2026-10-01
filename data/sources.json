@@ -1,0 +1,73 @@
+{
+ "fuente_principal": {
+  "nombre": "CGPJ — Informes por territorios sobre la actividad de los órganos judiciales → Series estadísticas (XLSX)",
+  "url": "https://www.poderjudicial.es/cgpj/es/Temas/Estadistica-Judicial/Estudios-e-Informes/Informes-por-territorios-sobre-la-actividad-de-los-organos-judiciales/Informes-por-territorios-sobre-la-actividad-de-los-organos-judiciales",
+  "formato": "XLSX, una hoja por orden jurisdiccional + hojas anuales 2001-2025",
+  "granularidad": "Nacional + comunidad autónoma (por orden jurisdiccional); provincias (total jurisdicciones)",
+  "ficheros": {
+   "Series_Asuntos.xlsx": "https://www.poderjudicial.es/stfls/ESTADISTICA/FICHEROS/3002 Series estadisticas/Series Asuntos.xlsx",
+   "Series_Asuntos_por_Provincias.xlsx": "https://www.poderjudicial.es/stfls/ESTADISTICA/FICHEROS/3002 Series estadisticas/Series Asuntos por Provincias.xlsx",
+   "Series_Tasas_de_Congestion.xlsx": "https://www.poderjudicial.es/stfls/ESTADISTICA/FICHEROS/3002 Series estadisticas/Series Tasas de Congestion.xlsx",
+   "Series_Tasas_de_Congestion_por_Provincias.xlsx": "https://www.poderjudicial.es/stfls/ESTADISTICA/FICHEROS/3002 Series estadisticas/Series Tasas de Congestion por Provincias.xlsx",
+   "Series_Tasas_de_Resolucion.xlsx": "https://www.poderjudicial.es/stfls/ESTADISTICA/FICHEROS/3002 Series estadisticas/Series Tasas de Resolucion.xlsx",
+   "Series_Tasas_de_Resolucion_por_Provincias.xlsx": "https://www.poderjudicial.es/stfls/ESTADISTICA/FICHEROS/3002 Series estadisticas/Series Tasas de Resolucion por Provincias.xlsx",
+   "Series_Tasas_de_Pendencia.xlsx": "https://www.poderjudicial.es/stfls/ESTADISTICA/FICHEROS/3002 Series estadisticas/Series Tasas de Pendencia.xlsx",
+   "Series_Tasas_de_Pendencia_por_Provincias.xlsx": "https://www.poderjudicial.es/stfls/ESTADISTICA/FICHEROS/3002 Series estadisticas/Series Tasas de Pendencia por Provincias.xlsx",
+   "Series_Tasa_Litigiosidad.xlsx": "https://www.poderjudicial.es/stfls/ESTADISTICA/FICHEROS/3002 Series estadisticas/Series Tasa Litigiosidad.xlsx",
+   "Series_Tasa_Litigiosidad_por_Provincias.xlsx": "https://www.poderjudicial.es/stfls/ESTADISTICA/FICHEROS/3002 Series estadisticas/Series Tasa Litigiosidad por Provincias.xlsx"
+  }
+ },
+ "definiciones_oficiales_tasas": {
+  "tasa_congestion": "Tasa de congestión. Cociente donde el numerador esta formado por la suma de los asuntos pendientes \nal inicio del periodo y los registrados en ese periodo y donde el denominador son los asuntos resueltos en dicho periodo.",
+  "tasa_resolucion": "Tasa de resolución:  cociente entre los asuntos resueltos en el período e ingresados en el mismo.",
+  "tasa_pendencia": "Tasa de pendencia: Cociente entre los asuntos pendientes al final del período y los resueltos en ese período.",
+  "tasa_litigiosidad": "Tasa de litigiosidad:  nº de asuntos ingresados por cada 1000 habitantes"
+ },
+ "definiciones_aviso": [
+  "Los ficheros 'Tasas de Congestion por Provincias' y 'Tasas de Pendencia por Provincias' llevan en su hoja Introducción la definición de la tasa de RESOLUCIÓN (error de copy-paste del CGPJ); sus valores sí corresponden a la tasa del título del fichero (verificado numéricamente en el informe)."
+ ],
+ "nota_espana": [
+  "Serie Total",
+  "Serie Jurisdicción Civil",
+  "Serie Jurisdicción Penal",
+  "Serie Jurisdicción Contencioso Administrativa",
+  "Serie Jurisdicción Social",
+  "Año 2025",
+  "Año 2024",
+  "Año 2023",
+  "Año 2022",
+  "Año 2021",
+  "Año 2020",
+  "Año 2019",
+  "Año 2018",
+  "Año 2017",
+  "Año 2016",
+  "Año 2015",
+  "Año 2014",
+  "Año 2013",
+  "Año 2012",
+  "Año 2011",
+  "Año 2010",
+  "Año 2009",
+  "Año 2008",
+  "Año 2007",
+  "Año 2006",
+  "Año 2005",
+  "Año 2004",
+  "Año 2003",
+  "Año 2002",
+  "Año 2001",
+  "Nota: En los datos de España no estan incluidos los datos de órganos centrales.",
+  "Fuente: Sección de Estadística Judicial. CGPJ"
+ ],
+ "fuente_poblacion": {
+  "nombre": "INE — Cifras de población a 1 de enero (tabla Tempus 31304)",
+  "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/31304?det=0&tip=AM",
+  "uso": "solo para el derivado en_tramite_por_habitante; la tasa de litigiosidad usa la que publica el propio CGPJ"
+ },
+ "duracion_media": {
+  "publicada": "sí, pero NO en estas series XLSX",
+  "punto_de_entrada": "https://www.poderjudicial.es/cgpj/es/Temas/Transparencia/ch.Estimacion-de-los-tiempos-medios-de-duracion-de-los-procedimientos-judiciales.formato1?anio=2024",
+  "nota": "Herramienta interactiva por tipo de órgano, orden, procedimiento, año y territorio (últimos 10 años, en meses). El CGPJ avisa de que es una ESTIMACIÓN obtenida por modelo matemático a partir de ingresados, resueltos y en trámite, no un dato observado. No hay descarga masiva; no se agrega en este observatorio."
+ }
+}

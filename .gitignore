@@ -1,2 +1,9 @@
 __pycache__/
 .DS_Store
+
+# Series XLSX oficiales del CGPJ (3,7 MB): las repone `python3 scripts/cgpj_fetch.py`.
+# Sí se versionan los derivados JSON de data/ (592 KB), que es lo que sirve la web.
+raw/
+
+# Informe interno de construcción, no se publica en la web
+data/_build_resumen.json
