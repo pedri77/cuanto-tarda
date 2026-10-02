@@ -9,49 +9,78 @@
 <meta property="og:description" content="Desde 2023 entran más asuntos de los que se resuelven. El stock en trámite ha subido un 130 % desde 2001.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%276%27 fill=%27%231f3a5f%27/%3E%3C/svg%3E">
 <style>
-  :root { --bg:#f4f5f7; --paper:#fff; --ink:#1a1d21; --ink-2:#5a626c; --line:#d8dce2; --accent:#1f3a5f;
-          --bar:#8aa6c8; --bar-hi:#1f3a5f; --warn:#b3382f; color-scheme: light; }
-  @media (prefers-color-scheme: dark) { :root { --bg:#12151a; --paper:#191d24; --ink:#edf0f4; --ink-2:#a2aab5; --line:#2b313a; --accent:#7fa8d9; --bar:#3d5878; --bar-hi:#7fa8d9; --warn:#e0645a; color-scheme: dark; } }
+  :root { --bg:#f4f6f9; --paper:#fff; --ink:#1a1d21; --ink-2:#5a626c; --line:#d8dce2; --accent:#1f3a5f; --accent-ink:#1f3a5f;
+          --warn:#c2412f; --hero:#e7eef7;
+          --c-orden:#8b5cf6; --c-ccaa:#2b7fd1; --c-cap:#e38b1e; --c-eu:#d9488a;
+          --t1:#1f3a5f; --t2:#7fa8d9; --t3:#8b5cf6; --t4:#2b7fd1; --t5:#e38b1e; --t6:#d9488a; --t7:#8a96a0;
+          --on-bar:#fff; --r:12px; color-scheme: light; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#10141a; --paper:#181d25; --ink:#edf0f4; --ink-2:#a2aab5; --line:#2b313a; --accent:#7fa8d9; --accent-ink:#a9c6e8;
+          --warn:#ef6a58; --hero:#16202e;
+          --c-orden:#a78bfa; --c-ccaa:#5fa3ea; --c-cap:#f0a548; --c-eu:#ef7fb0;
+          --t1:#7fa8d9; --t2:#a9c6e8; --t3:#a78bfa; --t4:#5fa3ea; --t5:#f0a548; --t6:#ef7fb0; --t7:#6f7f8a; --on-bar:#10141a; color-scheme: dark; } }
   * { box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
   body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.55 system-ui,-apple-system,"Segoe UI",sans-serif; }
   .wrap { max-width:1100px; margin:0 auto; padding:24px 20px 60px; }
-  h1 { font-size:clamp(1.9rem,4vw,3rem); line-height:1.08; margin:10px 0; letter-spacing:-.02em; }
-  h2 { font-size:1.35rem; margin:38px 0 6px; }
-  .lede { color:var(--ink-2); max-width:66ch; font-size:1.05rem; }
-  .eyebrow { font-size:.78rem; text-transform:uppercase; letter-spacing:.08em; color:var(--accent); font-weight:700; margin:0; }
-  .kpis { display:grid; grid-template-columns:repeat(auto-fit,minmax(190px,1fr)); gap:14px; margin:26px 0 10px; }
-  .kpi { background:var(--paper); border:1px solid var(--line); border-radius:10px; padding:16px; }
-  .kpi b { display:block; font-size:1.9rem; font-weight:800; line-height:1.1; font-variant-numeric:tabular-nums; }
+  h1 { font-size:clamp(2.2rem,5vw,3.6rem); line-height:1.02; margin:8px 0 14px; letter-spacing:-.03em; font-weight:800; }
+  h2 { font-size:1.45rem; margin:46px 0 8px; letter-spacing:-.015em; padding-left:14px; border-left:4px solid var(--sec,var(--accent)); line-height:1.2; }
+  .lede { color:var(--ink-2); max-width:62ch; font-size:1.08rem; margin:0; }
+  .eyebrow { font-size:.76rem; text-transform:uppercase; letter-spacing:.09em; color:var(--accent-ink); font-weight:700; margin:0; }
+  .hero { display:grid; grid-template-columns:1.25fr .9fr; gap:28px; align-items:center; background:linear-gradient(135deg,var(--hero),var(--paper) 70%); border:1px solid var(--line); border-radius:var(--r); padding:30px 32px; margin-bottom:8px; }
+  .hero-num { text-align:right; }
+  .hero-num b { display:block; font-size:clamp(3rem,7vw,5.2rem); font-weight:900; letter-spacing:-.04em; line-height:.95; color:var(--accent); font-variant-numeric:tabular-nums; }
+  .hero-num span { color:var(--ink-2); font-size:1rem; }
+  .hero-num span { display:block; }
+  .hero-num .anio { display:flex; gap:8px; align-items:center; margin-top:14px; justify-content:flex-end; }
+  @media (max-width:760px) { .hero-num .anio { justify-content:flex-start; } }
+  @media (max-width:760px) { .hero { grid-template-columns:1fr; } .hero-num { text-align:left; } }
+  .kpis { display:grid; grid-template-columns:repeat(auto-fit,minmax(190px,1fr)); gap:14px; margin:22px 0 10px; }
+  .kpi { background:var(--paper); border:1px solid var(--line); border-top:4px solid var(--sec,var(--accent)); border-radius:var(--r); padding:16px; }
+  .kpi b { display:block; font-size:1.95rem; font-weight:800; line-height:1.1; font-variant-numeric:tabular-nums; letter-spacing:-.02em; color:var(--sec,var(--accent)); }
   .kpi span { color:var(--ink-2); font-size:.9rem; }
-  .card { background:var(--paper); border:1px solid var(--line); border-radius:10px; padding:16px; overflow-x:auto; margin-top:12px; }
-  .aviso { border-left:3px solid var(--accent); padding:10px 14px; background:var(--paper); border-radius:0 8px 8px 0; margin:18px 0; }
-  .aviso.warn { border-left-color:var(--warn); }
+  .sec-violeta { --sec:var(--c-orden); } .sec-azul { --sec:var(--c-ccaa); } .sec-naranja { --sec:var(--c-cap); } .sec-rosa { --sec:var(--c-eu); } .sec-rojo { --sec:var(--warn); }
+  .card { background:var(--paper); border:1px solid var(--line); border-radius:var(--r); padding:18px; overflow-x:auto; margin-top:12px; }
+  .aviso { border-left:4px solid var(--accent); padding:12px 16px; background:var(--paper); border-radius:0 var(--r) var(--r) 0; margin:18px 0; }
+  .aviso.warn { border-left-color:var(--warn); background:color-mix(in srgb, var(--warn) 7%, var(--paper)); }
   .nota { font-size:.87rem; color:var(--ink-2); margin-top:10px; }
-  a { color:var(--accent); }
-  select { font:inherit; padding:7px 10px; border-radius:8px; border:1px solid var(--line); background:var(--paper); color:var(--ink); }
+  a { color:var(--accent-ink); }
+  select { font:inherit; padding:7px 12px; border-radius:999px; border:1px solid var(--line); background:var(--paper); color:var(--ink); font-weight:600; }
   svg { width:100%; height:auto; display:block; }
+  .leyenda { display:flex; flex-wrap:wrap; gap:14px 18px; font-size:.85rem; color:var(--ink-2); margin-top:10px; }
+  .leyenda i { display:inline-block; width:12px; height:12px; border-radius:3px; vertical-align:-1px; margin-right:6px; }
   table { width:100%; border-collapse:collapse; font-variant-numeric:tabular-nums; font-size:.92rem; }
-  th,td { padding:8px 10px; border-bottom:1px solid var(--line); text-align:left; }
+  th,td { padding:9px 10px; border-bottom:1px solid var(--line); text-align:left; }
+  tbody tr:hover td { background:color-mix(in srgb, var(--accent) 6%, transparent); }
   td.r, th.r { text-align:right; }
-  th { font-size:.73rem; text-transform:uppercase; letter-spacing:.05em; color:var(--ink-2); cursor:pointer; user-select:none; }
+  th { font-size:.72rem; text-transform:uppercase; letter-spacing:.05em; color:var(--ink-2); cursor:pointer; user-select:none; }
   .bar { position:relative; }
-  .bar i { position:absolute; inset:0 auto 0 0; background:var(--bar); opacity:.3; border-radius:3px; }
+  .bar i { position:absolute; inset:0 auto 0 0; background:var(--accent); opacity:.18; border-radius:4px; }
   .bar span { position:relative; }
-  footer { margin-top:44px; border-top:1px solid var(--line); padding-top:16px; font-size:.87rem; color:var(--ink-2); }
+  .chip { display:inline-block; font-size:.74rem; font-weight:600; padding:2px 9px; border-radius:999px; color:var(--on-bar); white-space:nowrap; }
+  .guia p { padding-left:14px; border-left:3px solid var(--line); margin:14px 0; }
+  footer { margin-top:48px; border-top:1px solid var(--line); padding-top:18px; font-size:.87rem; color:var(--ink-2); }
   code { background:var(--bg); padding:1px 5px; border-radius:4px; font-size:.85em; }
+  @media (prefers-reduced-motion: no-preference) { .kpi, .card { transition:transform .15s ease; } }
 </style>
 </head>
 <body>
 <div class="wrap">
-  <p class="eyebrow">Construido con IA · IAcademy</p>
-  <h1>Cuánto tarda la justicia</h1>
-  <p class="lede">Veinticinco años de estadística judicial oficial del <strong>CGPJ</strong>, en un solo sitio: cuántos asuntos entran, cuántos se resuelven y cuántos se quedan esperando en los juzgados españoles, por comunidad, por provincia y por orden jurisdiccional.</p>
+  <div class="hero">
+    <div>
+      <p class="eyebrow">Construido con IA · IAcademy</p>
+      <h1>Cuánto tarda la justicia</h1>
+      <p class="lede">Veinticinco años de estadística judicial oficial del <strong>CGPJ</strong>, en un solo sitio: cuántos asuntos entran, cuántos se resuelven y cuántos se quedan esperando en los juzgados españoles, por comunidad, por provincia y por orden jurisdiccional.</p>
+    </div>
+    <div class="hero-num">
+      <b id="hero-num"></b>
+      <span id="hero-label">asuntos en trámite</span>
+      <div class="anio">Año <select id="anio"></select></div>
+    </div>
+  </div>
 
   <div class="aviso warn">
     <strong>Un aviso honesto antes de nada: aquí no verás «cuántos días tarda un juicio».</strong> La duración media de los procedimientos <strong>no está en las series descargables</strong> del CGPJ: solo aparece en su herramienta interactiva de transparencia y como estimación. Este observatorio trabaja con lo que sí se publica y se puede verificar: asuntos <strong>ingresados</strong>, <strong>resueltos</strong> y <strong>en trámite</strong>, y las tres tasas que el propio CGPJ define con ellos.
   </div>
-
-  <p style="margin-top:22px">Año: <select id="anio"></select></p>
 
   <div class="kpis" id="kpis"></div>
   <p class="nota" id="nota-kpis"></p>
@@ -64,40 +93,40 @@
   <div class="card"><svg id="g-entra-sale" role="img" aria-label="Asuntos ingresados frente a resueltos por año"></svg></div>
   <p class="nota" id="nota-entra-sale"></p>
 
-  <h2>Por orden jurisdiccional <span id="anio-orden" style="color:var(--ink-2);font-weight:400"></span></h2>
+  <h2 class="sec-violeta">Por orden jurisdiccional <span id="anio-orden" style="color:var(--ink-2);font-weight:400"></span></h2>
   <div class="card"><table id="t-orden"></table></div>
   <p class="nota">Congestión = (en trámite al inicio + ingresados) ÷ resueltos. Resolución = resueltos ÷ ingresados. Pendencia = en trámite al final ÷ ingresados. Definiciones oficiales del CGPJ, reproducidas en <code>data/sources.json</code>.</p>
 
-  <h2>Por comunidad autónoma</h2>
+  <h2 class="sec-azul">Por comunidad autónoma</h2>
   <p style="margin:10px 0"><select id="metrica"></select></p>
   <div class="card"><svg id="g-ccaa" role="img" aria-label="Indicador por comunidad autónoma"></svg></div>
   <p class="nota" id="nota-ccaa"></p>
 
-  <h2>Las 50 provincias</h2>
+  <h2 class="sec-azul">Las 50 provincias</h2>
   <div class="card"><table id="t-prov"></table></div>
   <p class="nota">Ordena por cualquier columna haciendo clic en la cabecera. «En trámite por 1.000 hab.» es un dato derivado: asuntos pendientes entre la población; el CGPJ publica los asuntos, la población es del INE.</p>
 
-  <h2>Quién sostiene todo esto: el personal de la justicia</h2>
+  <h2 class="sec-naranja">Quién sostiene todo esto: el personal de la justicia</h2>
   <div class="aviso warn">
     <strong>Plazas, efectivos y sustitutos no son lo mismo y aquí no se suman.</strong> Una «plaza constituida» es un puesto creado por real decreto; un «juez en activo» es quien lo ocupa ese año; y hay refuerzos y sustituciones que no son plaza. Mezclarlos daría un número falso. Cada cifra va con su definición y su fuente.
   </div>
-  <div class="kpis" id="kpis-cap"></div>
+  <div class="kpis sec-naranja" id="kpis-cap"></div>
   <p class="nota" id="nota-cap"></p>
 
-  <h2>La demanda crece, la plantilla no</h2>
+  <h2 class="sec-naranja">La demanda crece, la plantilla no</h2>
   <div class="card"><svg id="g-ratio" role="img" aria-label="Asuntos ingresados por juez en activo, por año"></svg></div>
   <p class="nota" id="nota-ratio"></p>
 
-  <h2>Cómo se compara España con Europa</h2>
+  <h2 class="sec-rosa">Cómo se compara España con Europa</h2>
   <div class="card"><svg id="g-cepej" role="img" aria-label="Jueces y personal por 100.000 habitantes, España frente a la mediana de la UE"></svg></div>
   <p class="nota">Fuente: CEPEJ (Consejo de Europa), edición 2024, misma definición para todos los países. Es la única comparación internacional fiable: la serie de Eurostat rompe en 2017 por un cambio de criterio en el reporte español y no se usa aquí. <strong>Y ojo, que España también cambia de criterio al reportar al CEPEJ</strong>: en 2024 declara 5.431 jueces profesionales, que son los jueces <em>en activo</em> del CGPJ, pero en 2022 declaró 5.728, que son las <em>plazas constituidas</em>. Por eso aquí se compara un solo año (2024) y no se dibuja una evolución: la tendencia estaría contaminada por el cambio de definición.</p>
 
-  <h2>Las plazas que el CGPJ pide y las que se crean</h2>
+  <h2 class="sec-rojo">Las plazas que el CGPJ pide y las que se crean</h2>
   <div class="card"><svg id="g-plazas" role="img" aria-label="Plazas necesarias frente a plazas creadas por año"></svg></div>
   <p class="nota" id="nota-plazas"></p>
 
   <h2>Cómo leer esto sin equivocarse</h2>
-  <div class="card">
+  <div class="card guia">
     <p style="margin-top:0"><strong>Congestión alta no significa lentitud.</strong> Significa que hay muchos asuntos vivos por cada uno que se resuelve. Un juzgado puede tener congestión alta y trabajar a buen ritmo si le entra mucho.</p>
     <p><strong>La serie larga (2001-2025) no es perfectamente homogénea.</strong> Cambios como la desjudicialización de algunos asuntos o la entrada en vigor de la Oficina Judicial (2021) alteran lo que se cuenta. Las comparaciones entre años lejanos hay que tomarlas con cautela, y así lo advierte el propio CGPJ.</p>
     <p><strong>El total de España no es la suma de las comunidades.</strong> Falta Ceuta y Melilla (sin fila propia) y están excluidos los órganos centrales (Tribunal Supremo, Audiencia Nacional y juzgados centrales).</p>
@@ -134,7 +163,7 @@ $('#gen').textContent = `Series de ${anios[0]} a ${anios.at(-1)}; última extrac
 const NS = 'http://www.w3.org/2000/svg';
 function svgAdd(el, t, a, txt) { const e = document.createElementNS(NS, t); for (const k in a) e.setAttribute(k, a[k]); if (txt != null) e.textContent = txt; el.appendChild(e); return e; }
 
-function area(el, puntos, { H = 300, fmt, color = 'var(--bar-hi)' }) {
+function area(el, puntos, { H = 300, fmt, color = 'var(--accent)' }) {
   const W = 640, m = { t: 20, r: 16, b: 40, l: 74 };
   const vals = puntos.map((p) => p[1]);
   const max = Math.max(...vals), min = Math.min(...vals, 0);
@@ -155,13 +184,17 @@ function area(el, puntos, { H = 300, fmt, color = 'var(--bar-hi)' }) {
   });
 }
 
-function barras(el, filas, { etiqueta, valor, fmt, alto, resaltar = () => false }) {
-  const W = 640, m = { t: 12, r: 84, b: 10, l: 176 };
+// Barras horizontales con pista de fondo y rampa de opacidad sobre el acento.
+function barras(el, filas, { etiqueta, valor, fmt, alto, color = 'var(--accent)' }) {
+  const W = 640, m = { t: 12, r: 200, b: 10, l: 176 };
   const n = filas.length, h = (alto - m.t - m.b) / n, max = Math.max(...filas.map(valor));
+  const trackW = W - m.l - m.r;
   el.setAttribute('viewBox', `0 0 ${W} ${alto}`); el.innerHTML = '';
   filas.forEach((f, i) => {
-    const yy = m.t + i * h, w = (W - m.l - m.r) * valor(f) / max;
-    svgAdd(el, 'rect', { x: m.l, y: yy + 2, width: Math.max(w, 1), height: h - 6, rx: 3, fill: 'var(--bar-hi)', 'fill-opacity': resaltar(f) ? .95 : .5 });
+    const yy = m.t + i * h, w = trackW * valor(f) / max;
+    const op = n > 1 ? (0.95 - 0.5 * i / (n - 1)) : 0.95;
+    svgAdd(el, 'rect', { x: m.l, y: yy + 2, width: trackW, height: h - 6, rx: 4, fill: 'var(--line)', 'fill-opacity': .45 });
+    svgAdd(el, 'rect', { x: m.l, y: yy + 2, width: Math.max(w, 1), height: h - 6, rx: 4, fill: color, 'fill-opacity': op });
     svgAdd(el, 'text', { x: m.l - 8, y: yy + h / 2 + 4, 'text-anchor': 'end', 'font-size': 12, fill: 'var(--ink)' }, etiqueta(f));
     svgAdd(el, 'text', { x: m.l + w + 6, y: yy + h / 2 + 4, 'font-size': 12, fill: 'var(--ink-2)' }, fmt(valor(f)));
   });
@@ -170,16 +203,16 @@ function barras(el, filas, { etiqueta, valor, fmt, alto, resaltar = () => false 
 // Dos barras por categoría (España / mediana UE): comparación directa, misma escala.
 function barrasDobles(el, filas) {
   const W = 640, m = { t: 34, r: 96, b: 10, l: 168 };
-  const n = filas.length, h = (n * 64 + m.t + m.b - m.t - m.b) / n, max = Math.max(...filas.flatMap((f) => [f[1], f[2]]));
+  const n = filas.length, max = Math.max(...filas.flatMap((f) => [f[1], f[2]]));
   const alto = m.t + m.b + n * 64;
   el.setAttribute('viewBox', `0 0 ${W} ${alto}`); el.innerHTML = '';
   const ley = (x, c, t) => { svgAdd(el, 'rect', { x, y: 12, width: 16, height: 4, rx: 2, fill: c }); svgAdd(el, 'text', { x: x + 22, y: 19, 'font-size': 12, fill: 'var(--ink-2)' }, t); };
-  ley(m.l, 'var(--bar-hi)', 'España');
-  ley(m.l + 110, 'var(--ink-2)', 'Mediana UE');
+  ley(m.l, 'var(--t6)', 'España');
+  ley(m.l + 110, 'var(--t7)', 'Mediana UE');
   filas.forEach(([nombre, es, ue], i) => {
     const yy = m.t + i * 64;
     svgAdd(el, 'text', { x: m.l - 8, y: yy + 26, 'text-anchor': 'end', 'font-size': 12, fill: 'var(--ink)' }, nombre);
-    [[es, 'var(--bar-hi)', .95], [ue, 'var(--ink-2)', .45]].forEach(([v, c, op], k) => {
+    [[es, 'var(--t6)', .95], [ue, 'var(--t7)', .8]].forEach(([v, c, op], k) => {
       const w = (W - m.l - m.r) * v / max;
       svgAdd(el, 'rect', { x: m.l, y: yy + k * 24, width: Math.max(w, 1), height: 18, rx: 3, fill: c, 'fill-opacity': op });
       svgAdd(el, 'text', { x: m.l + w + 6, y: yy + k * 24 + 14, 'font-size': 12, fill: 'var(--ink-2)' }, N(v, 1));
@@ -230,10 +263,17 @@ function tabla(el, cols, filas, ordenInicial = null) {
   pintar();
 }
 
-const ORDENES = [['civil', 'Civil'], ['penal', 'Penal'], ['contencioso', 'Contencioso-administrativo'], ['social', 'Social']];
+const ORDENES = [
+  ['civil', 'Civil', 'var(--t3)'],
+  ['penal', 'Penal', 'var(--t4)'],
+  ['contencioso', 'Contencioso-administrativo', 'var(--t5)'],
+  ['social', 'Social', 'var(--t6)'],
+];
 
 function pintaAnio(y) {
   const r = nac[y];
+  $('#hero-num').textContent = N(r.total_en_tramite);
+  $('#hero-label').textContent = `asuntos en trámite en ${y}`;
   $('#kpis').innerHTML = [
     [N(r.total_ingresados), 'asuntos ingresados'],
     [N(r.total_resueltos), 'asuntos resueltos'],
@@ -258,13 +298,13 @@ function pintaAnio(y) {
   } else {
     $('#anio-orden').textContent = `· ${y}`;
     tabla($('#t-orden'), [
-      { k: 'n', t: 'Orden', get: (o) => o.n, v: (o) => o.n },
+      { k: 'n', t: 'Orden', get: (o) => o.n, v: (o) => `<span class="chip" style="background:${o.col}">${o.n}</span>` },
       { k: 'i', t: 'Ingresados', r: 1, get: (o) => o.i, v: (o) => N(o.i) },
       { k: 'r', t: 'Resueltos', r: 1, get: (o) => o.r, v: (o) => N(o.r) },
       { k: 't', t: 'En trámite', r: 1, bar: 1, get: (o) => o.t, v: (o) => N(o.t) },
       { k: 'c', t: 'Congestión', r: 1, get: (o) => o.c, v: (o) => N(o.c, 2) },
       { k: 'p', t: 'Pendencia', r: 1, get: (o) => o.p, v: (o) => N(o.p, 2) },
-    ], ORDENES.map(([k, n]) => ({ n, i: ord[k].ingresados, r: ord[k].resueltos, t: ord[k].en_tramite_final, c: ord[k].tasa_congestion, p: ord[k].tasa_pendencia })), { key: 'c', dir: -1 });
+    ], ORDENES.map(([k, n, col]) => ({ n, col, i: ord[k].ingresados, r: ord[k].resueltos, t: ord[k].en_tramite_final, c: ord[k].tasa_congestion, p: ord[k].tasa_pendencia })), { key: 'c', dir: -1 });
   }
 
   const cc = D.ccaa.comunidades;
@@ -279,7 +319,7 @@ function pintaAnio(y) {
     en_tramite_por_1000_hab_derivada: (v) => N(v, 1),
     tasa_litigiosidad: (v) => N(v, 1),
   };
-  barras($('#g-ccaa'), filas, { etiqueta: (f) => f.n, valor: (f) => f.v, fmt: fmts[metrica], alto: filas.length * 30 + 24 });
+  barras($('#g-ccaa'), filas, { etiqueta: (f) => f.n, valor: (f) => f.v, fmt: fmts[metrica], alto: filas.length * 30 + 24, color: 'var(--c-ccaa)' });
   $('#nota-ccaa').textContent = METRICAS.find((m) => m[0] === metrica)[2];
 }
 
@@ -338,7 +378,7 @@ tabla($('#t-prov'), [
   // homogéneo y se dice, porque mezclarlo antes daría una caída que no es real.
   const R = D.plantilla_ratios.por_anio;
   const tramo = Object.keys(R).filter((a) => R[a].jueces_en_activo != null && a >= '2016').sort();
-  area($('#g-ratio'), tramo.map((a) => [a, R[a].ingresados_por_juez_activo]), { fmt: (v) => N(v) });
+  area($('#g-ratio'), tramo.map((a) => [a, R[a].ingresados_por_juez_activo]), { fmt: (v) => N(v), color: 'var(--c-cap)' });
   const j0 = R[tramo[0]], j1 = R[tramo.at(-1)];
   $('#nota-ratio').textContent = `Asuntos ingresados por juez en activo. En ${tramo[0]} eran ${N(j0.ingresados_por_juez_activo)} y en ${tramo.at(-1)} son ${N(j1.ingresados_por_juez_activo)}: un ${N(100 * (j1.ingresados_por_juez_activo / j0.ingresados_por_juez_activo - 1), 0)} % más de carga. Los jueces en activo apenas se mueven en el mismo periodo: de ${N(j0.jueces_en_activo)} a ${N(j1.jueces_en_activo)}.`;
 
@@ -357,7 +397,7 @@ tabla($('#t-prov'), [
   const aniosP = Object.keys(pv).filter((a) => pv[a].necesarias != null && pv[a].creadas != null).sort();
   barrasAgrupadas($('#g-plazas'), aniosP, [
     { nombre: 'Necesarias según el CGPJ', color: 'var(--warn)', get: (a) => pv[a].necesarias },
-    { nombre: 'Creadas por real decreto', color: 'var(--bar-hi)', get: (a) => pv[a].creadas },
+    { nombre: 'Creadas por real decreto', color: 'var(--t1)', get: (a) => pv[a].creadas },
   ]);
   const totN = aniosP.reduce((s, a) => s + pv[a].necesarias, 0);
   const totC = aniosP.reduce((s, a) => s + pv[a].creadas, 0);
